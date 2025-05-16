@@ -1,25 +1,4 @@
 
-@font-face {
-    font-family: 'Adwaita Mono';
-    src: url("AdwaitaMono-Regular.woff2") format("woff2");
-    font-style: normal;
-    font-weight: normal;
-}
-
-@font-face {
-    font-family: 'Adwaita Mono';
-    src: url("AdwaitaMono-Bold.woff2") format("woff2");
-    font-style: normal;
-    font-weight: bold;
-}
-
-@font-face {
-    src: url("AdwaitaMono-Italic.woff2") format("woff2");
-    font-family: 'Adwaita Mono';
-    font-style: italic;
-    font-weight: normal;
-}
-
 .loader-wrapper {
     display:none;
 }
