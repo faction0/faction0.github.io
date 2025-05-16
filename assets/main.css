@@ -1,0 +1,80 @@
+
+@font-face {
+    src: url("AdwaitaMono-Regular.woff2") format("woff2");
+    font-family: 'Adwaita Mono';
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    src: url("AdwaitaMono-Bold.woff2") format("woff2");
+    font-family: 'Adwaita Mono';
+    font-style: normal;
+    font-weight: bold;
+}
+
+@font-face {
+    src: url("AdwaitaMono-Italic.woff2") format("woff2");
+    font-family: 'Adwaita Mono';
+    font-style: italic;
+    font-weight: normal;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+      background: #000;
+    }
+    .main-svg-desktop {
+        -webkit-filter: invert(100%); 
+          filter: invert(100%);
+    }
+
+    .main-svg-mobile {
+        -webkit-filter: invert(100%);
+            filter: invert(100%);
+    }
+  }
+  
+@media (prefers-color-scheme: light) {
+    body {
+      background: #fff;
+    }
+}
+
+@media screen and (min-aspect-ratio: 1/1.1) {
+    .main-svg-mobile {
+        display: none
+    }
+
+    .main-svg-desktop {
+        display: block;
+        width: 90%;
+        max-height: 60%;
+    }
+}
+
+@media (max-aspect-ratio: 1/1.1) {
+    .main-svg-mobile {
+        display: block;
+        width: 90%;
+        max-height: 80%;
+    }
+
+    .main-svg-desktop {
+        display:none;
+    }
+}
+
+
+
+
+  
