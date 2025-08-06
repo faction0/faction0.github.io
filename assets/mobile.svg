@@ -3,8 +3,8 @@
 
 <svg
    width="124.39503mm"
-   height="146.67024mm"
-   viewBox="0 0 124.39503 146.67024"
+   height="145.51291mm"
+   viewBox="0 0 124.39503 145.51291"
    version="1.1"
    id="svg1"
    sodipodi:docname="mobile.svg"
@@ -25,32 +25,33 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      showguides="true"
-     inkscape:zoom="1.0000001"
-     inkscape:cx="61.499997"
-     inkscape:cy="271.49999"
-     inkscape:window-width="1276"
-     inkscape:window-height="1060"
+     inkscape:zoom="2.8284274"
+     inkscape:cx="368.04904"
+     inkscape:cy="506.81874"
+     inkscape:window-width="2556"
+     inkscape:window-height="1058"
      inkscape:window-x="0"
-     inkscape:window-y="0"
-     inkscape:window-maximized="0"
-     inkscape:current-layer="layer1">
-     <style>
+     inkscape:window-y="20"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer5">
+    <style
+       id="style1">
  @font-face {
     font-family: 'Adwaita Mono';
-    src: url("AdwaitaMono-Regular.woff2") format("woff2");
+    src: url(&quot;AdwaitaMono-Regular.woff2&quot;) format(&quot;woff2&quot;);
     font-style: normal;
     font-weight: normal;
 }
 
 @font-face {
     font-family: 'Adwaita Mono';
-    src: url("AdwaitaMono-Bold.woff2") format("woff2");
+    src: url(&quot;AdwaitaMono-Bold.woff2&quot;) format(&quot;woff2&quot;);
     font-style: normal;
     font-weight: bold;
 }
 
 @font-face {
-    src: url("AdwaitaMono-Italic.woff2") format("woff2");
+    src: url(&quot;AdwaitaMono-Italic.woff2&quot;) format(&quot;woff2&quot;);
     font-family: 'Adwaita Mono';
     font-style: italic;
     font-weight: normal;
@@ -58,14 +59,14 @@
 
  </style>
     <sodipodi:guide
-       position="32.664658,286.87514"
+       position="32.664659,286.87514"
        orientation="0,1"
        id="guide3"
        inkscape:locked="false"
        inkscape:label=""
        inkscape:color="rgb(0,134,229)" />
     <sodipodi:guide
-       position="10.251555,283.84794"
+       position="10.251556,283.84794"
        orientation="1,0"
        id="guide4"
        inkscape:locked="false" />
@@ -80,52 +81,52 @@
        id="guide6"
        inkscape:locked="false" />
     <sodipodi:guide
-       position="0.25155242,259.859"
+       position="0.2515536,259.859"
        orientation="-1,0"
        id="guide9"
        inkscape:locked="false"
        inkscape:label=""
        inkscape:color="rgb(0,134,229)" />
     <sodipodi:guide
-       position="24.330283,296.87514"
+       position="24.330284,296.87514"
        orientation="0,1"
        id="guide10"
        inkscape:locked="false"
        inkscape:label=""
        inkscape:color="rgb(0,134,229)" />
     <sodipodi:guide
-       position="63.4875,277.58565"
+       position="63.487501,277.58565"
        orientation="1,0"
        id="guide11"
        inkscape:locked="false" />
     <sodipodi:guide
-       position="73.487501,277.58565"
+       position="73.487502,277.58565"
        orientation="-1,0"
        id="guide12"
        inkscape:label=""
        inkscape:locked="false"
        inkscape:color="rgb(0,134,229)" />
     <sodipodi:guide
-       position="44.554372,255.72811"
+       position="44.554373,255.72811"
        orientation="0,1"
        id="guide14"
        inkscape:label=""
        inkscape:locked="false"
        inkscape:color="rgb(0,134,229)" />
     <sodipodi:guide
-       position="25.08755,247.2422"
+       position="25.087551,247.2422"
        orientation="0,-1"
        id="guide20"
        inkscape:locked="false" />
     <sodipodi:guide
-       position="25.08755,257.2422"
+       position="25.087551,257.2422"
        orientation="0,1"
        id="guide21"
        inkscape:label=""
        inkscape:locked="false"
        inkscape:color="rgb(0,134,229)" />
     <sodipodi:guide
-       position="39.195205,220.97378"
+       position="39.195206,220.97378"
        orientation="1,0"
        id="guide23"
        inkscape:locked="false" />
@@ -143,7 +144,7 @@
      inkscape:groupmode="layer"
      id="layer2"
      inkscape:label="contact"
-     transform="translate(-32.440976,-35.121987)">
+     transform="translate(-32.440975,-35.121987)">
     <path
        id="rect15-9"
        style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.264024;stroke-dasharray:none;stroke-opacity:1"
@@ -166,7 +167,7 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:'Adwaita Mono';-inkscape-font-specification:'Adwaita Mono';stroke-width:0.264583"
          x="42.301998"
          y="98.168861"
-         id="tspan18">discord: 000000000000141360 </tspan><tspan
+         id="tspan18">discord: memorable_username </tspan><tspan
          sodipodi:role="line"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:'Adwaita Mono';-inkscape-font-specification:'Adwaita Mono';stroke-width:0.264583"
          x="42.301998"
@@ -189,7 +190,7 @@
      inkscape:groupmode="layer"
      id="layer3"
      inkscape:label="name"
-     transform="translate(-32.488988,-35.121987)">
+     transform="translate(-32.488987,-35.121987)">
     <path
        id="rect15"
        style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.264024;stroke-dasharray:none;stroke-opacity:1"
@@ -237,7 +238,7 @@
      id="layer4"
      inkscape:label="relevant"
      inkscape:highlight-color="#d705d0"
-     transform="translate(-32.488988,-35.272975)"
+     transform="translate(-32.488987,-35.272975)"
      style="display:inline">
     <path
        id="rect15-2"
@@ -334,7 +335,7 @@
         <path
            d="m 54.285572,134.55566 c -3.85062,0.8585 -7.00686,2.99212 -9.17836,6.22411 -3.80012,5.69387 -3.04262,13.33198 1.80537,18.20523 1.45187,1.46449 3.66124,2.87849 5.32774,3.42136 0.61863,0.202 0.69438,0.202 0.97213,0.0126 3.42582,0.10271 7.97896,0.0126 7.97896,0.0126 0.29037,0.18938 0.3535,0.18938 0.9595,-0.0252 1.01,-0.34087 2.73962,-1.27512 3.68649,-1.99474 5.63074,-4.21675 7.44874,-11.77911 4.33037,-18.06635 -1.83062,-3.69912 -5.28987,-6.53973 -9.25411,-7.60024 -1.72962,-0.4545 -4.98687,-0.5555 -6.62812,-0.18937 z"
            id="path2"
-           style="display:inline;stroke-width:0.012625;fill:#000000;fill-opacity:0"
+           style="display:inline;fill:#000000;fill-opacity:0;stroke-width:0.012625"
            inkscape:label="that"
            transform="translate(-1.1875e-6)"
            sodipodi:nodetypes="cccccccccccc" />
@@ -349,7 +350,7 @@
        inkscape:label="lil text"><tspan
          sodipodi:role="line"
          id="tspan25-2"
-         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;font-family:'Adwaita Mono';-inkscape-font-specification:'Adwaita Mono Bold';stroke-width:0.264583"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52778px;font-family:'Adwaita Mono';-inkscape-font-specification:'Adwaita Mono Italic';stroke-width:0.264583"
          x="115.34161"
          y="124.67713">(tap to go)</tspan></text>
     <text
@@ -369,11 +370,11 @@
      inkscape:groupmode="layer"
      id="layer5"
      inkscape:label="extra"
-     transform="translate(-32.488988,-35.121987)">
+     transform="translate(-32.488987,-35.121987)">
     <path
        id="rect25"
-       style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.264999;stroke-dasharray:none;stroke-opacity:1"
-       d="m 115.1466,176.09366 v 5.56607 h 39.45501 v -5.56607 z"
+       style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.236686;stroke-dasharray:none;stroke-opacity:1"
+       d="m 115.13245,176.07951 v 4.43704 h 39.48331 v -4.43704 z"
        sodipodi:nodetypes="ccccc"
        inkscape:label="url bg" />
     <a
@@ -395,5 +396,5 @@
     </a>
   </g>
   <style
-     id="style1" />
+     id="style2" />
 </svg>
