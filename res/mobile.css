@@ -1,0 +1,212 @@
+.desktop {
+  display: none;
+}
+
+body {
+  justify-content: center;
+  align-items: center;
+  
+  color: var(--main-col);
+
+  font-family: 'Adwaita Mono';
+  font-weight: normal;
+}
+
+
+.mobile {
+
+  --border-width: 0.5vw;
+
+  display:block;
+  border: var(--border-width) #000 solid;
+
+  height: 85vh;
+  padding: 3vw;
+
+  width: 85vw;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  overflow-y: auto;
+}
+
+.intro {
+  height: fit-content;
+}
+
+.intro .entry {
+  width: 100%;
+  display: grid;
+  grid-auto-flow: row;
+}
+
+
+.intro > :nth-child(2) {
+  margin-top: 3vw;
+  padding-top: 2vw;
+  border-top: #000 1vw solid;
+  border-left: none;
+
+  padding-left: 0;
+}
+
+.intro .entry .title {
+  font-size: 6vw;
+  font-weight: bold;
+}
+
+.intro .entry .desc {
+  font-size: 4vw;
+  font-weight: normal;
+}
+
+
+
+.section {
+  margin-top: 3vw;
+
+  display: grid;
+  grid-auto-flow: row;
+}
+
+.section .header {
+  font-size: 6vw;
+
+  padding-bottom: 1.2vw;
+  margin-bottom: 3vw;
+  border-bottom: #000 1vw solid;
+}
+
+.project {
+  border: var(--border-width) #000 solid;
+  width: 99%;
+  height: 30vw;
+}
+
+.project .title {
+  margin-top:5%;
+  margin-left:4%;
+  
+  font-size: 6vw;
+  font-weight: bold;
+}
+
+
+.project .desc {
+  margin-left:4%;
+  margin-right:4%;
+  margin-top:2%;
+
+  font-size: 4vw;
+  font-style: italic;
+}
+
+
+.project .icons {
+  float: right;
+
+  margin-top: 0.48vw;
+  margin-right: 0.6vw;
+}
+
+.project .icons img {
+  float:left;
+  width: 4.8vw;
+  margin-left: 1vw;
+}
+
+
+.platforms a {
+  font-size: 0;
+}
+
+.platforms > :not(:first-child) {
+  padding-left: 2.4vw;
+}
+
+.platforms a img {
+  width: 15vw;
+}
+
+
+.miscs {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+.miscs li {
+  font-size: 4vw;
+  font-weight: bold;
+
+  position: relative;
+  padding-left: 4.5vw;
+  white-space-collapse: collapse;
+}
+
+.miscs > :not(:first-child) {
+  margin-top: 1.2vw;
+}
+
+.miscs li span {
+  font-size: 3vw;
+  font-style: italic;
+  font-weight: normal;
+}
+
+.miscs li::before {
+  content: "";
+
+  position: absolute;
+  left: 1.08vw;
+  top: 1.5vw;
+
+  width: 1.4vw;
+  height: 1.12vw;
+  background: black;
+}
+
+
+
+.overlays {
+  pointer-events: none;
+  display: block;
+
+  height: 85vh;
+  padding: 3vw;
+  width: 85vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+}
+
+.overlays .mail {
+  display: block;
+
+  position: absolute;
+  top: -1.5vw;
+  right: 5vw;
+
+  padding: 0 1vw;
+
+  font-size: 2vw;
+
+  background-color: white
+}
+
+.overlays .site {
+  position: absolute;
+  bottom: -1.4vw;
+  right: 5vw;
+
+  padding: 0 1vw;
+
+  font-size: 2vw;
+
+  background-color: white
+}

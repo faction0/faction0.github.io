@@ -1,0 +1,165 @@
+<html>
+<head>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="res/mpd-local-scrobbler.css">
+  <link rel="stylesheet" href="res/mobile.css" media="(max-aspect-ratio: 0.95/1)">
+
+  <meta property="og:title" content="mpd-local-scrobbler">
+  <meta property="og:description" content="Local scrobbler for MPD activity, accessible at any time and completely local.">
+  <meta property="og:image" content="https://faction.im/res/img/logoless-project.png">
+  <meta property="og:url" content="https://faction.im/mpd-local-scrobbler">
+  <meta name="theme-color" content="#AAAAAA">
+
+</head>
+
+<body>
+  <div class="main">
+    
+    <div class="header">
+      <h1>mpd-local-scrobbler</h1>
+      <a href="/" class="go-back not-underlined-anchor"><<< go back</a>
+    </div>
+
+    <div class="section-desc">
+      <p>Keep track of what you listen to without sending anything to any third-party servers you don't own.</br></br>
+      You won't have to wait until december to get a brief and superficial overview about
+      your activity anymore, now you'll be able to get in-depth info about it whenever you want to.
+      </p>
+    </div>
+
+    <div class="section-fancy">
+      <div class="list">
+        <a href="https://codeberg.org/faction/mpd-local-scrobbler" class="not-underlined-anchor">
+        <div class="entry">
+          <div class="img-wrapper"><img src="res/ico/codeberg.svg"></div>
+          <p>Source Code</p>
+        </div>
+        </a>
+        
+        <label for="download-toggle" class="download-label">
+          <div class="entry">
+            <div class="img-wrapper"><img src="res/ico/download.svg"></div>
+            <p>Download</p>
+          </div>
+        </label>
+
+      </div>
+      
+      <div class="photo">
+        <img src="res/img/mpd-scrob/struct.png">
+      </div>
+
+    </div>
+
+    <input type="checkbox" id="download-toggle" class="download-checkbox">
+
+    <div class="download-options">
+
+      <input class="distro-radio" type="radio" id="linux" name="download-platform" value="1">
+      <label for="linux" class="download-label">
+        <div class="option">
+            <div class="img-wrapper"><img src="res/ico/linux.svg"></div>
+            <p>Linux</p>
+        </div>
+      </label>
+      
+      <input class="distro-radio" type="radio" id="windows" name="download-platform" value="2">
+      <label for="windows" class="download-label">
+        <div class="option">
+            <div class="img-wrapper"><img src="res/ico/windows.svg"></div>
+            <p>Windows</p>
+        </div>
+      </label>
+
+      <input class="distro-radio" type="radio" id="macos" name="download-platform" value="3">
+      <label for="macos" class="download-label">
+       <div class="option">
+          <div class="img-wrapper"><img src="res/ico/apple.svg"></div>
+          <p>MacOS</p>
+      </div>
+      </label>
+    </div>
+    
+    <!-- <input type="checkbox" id="linux-ìnstructions-toggle" class="linux-checkbox"> -->
+
+    <div class="download-info-wrapper linux-instructions-wrapper">
+      <div class="download-info">
+        <p>If you'd like to build and install from source, you can clone the repo then run the install script for your distro.</p>
+        <div class="code">
+          <p>
+          git clone https://codeberg.org/faction/mpd-local-scrobbler.git</br>
+          cd mpd-local-scrobbler/install/linux</br>
+          ls && echo "cd into your distro folder, then run install.sh"
+          </p>
+        </div>
+
+        <div class="pre-builts-divisor"></div>
+        <p>Otherwise, here are some pre-builts and how-tos for different distros:</p>
+        
+        <!-- Debian Instructions -->
+        <input class="distro-radio" type="radio" id="debian" name="linux-distro" value="1">
+        <label for="debian" class="debian-opener"><p>Debian / Ubuntu >>></p></label>
+
+        <div class="linux-distro-instructions debian-install-instructions">
+          <p>A Debian package is planned, but no advancements on it have been made.</p>
+        </div>
+
+        <!-- Arch Instructions -->
+        <input class="distro-radio" type="radio" id="arch" name="linux-distro" value="2">
+        <label for="arch" class="arch-opener"><p>Arch Linux / Manjaro / EndeavourOS >>></p></label>
+        
+        <div class="linux-distro-instructions arch-install-instructions">
+          <p>1. Install Dependencies:</p>
+          <div class="code">
+            <p>sudo pacman -S python-mpd2</p>
+          </div>
+          <p class="new-instruction">2. Download package (.pkg.tar.zst) | [SHA256]</p>
+          <p class="new-instruction">3. Install package:</p>
+          <div class="code">
+            <p>sudo pacman -U mpd-local-scrobbler.pkg.tar.zst</p>
+          </div>
+        </div>
+
+        <!-- Fedora Instructions -->
+        <input class="distro-radio" type="radio" id="fedora" name="linux-distro" value="3">
+        <label for="fedora" class="fedora-opener"><p>Fedora >>></p></label>
+        
+        <div class="linux-distro-instructions fedora-install-instructions">
+          <p>A Fedora package is planned, but no advancements on it have been made.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="download-info-wrapper windows-instructions-wrapper">
+      <div class="download-info">
+        <p>A Windows version is planned, but no advancements on it have been made.</p>
+      </div>
+    </div>
+
+    <div class="download-info-wrapper macos-instructions-wrapper">
+      <div class="download-info">
+        <p>A MacOS version is planned, but no advancements on it have been made.</p>
+      </div>
+    </div>
+
+    <div class="repo-info">
+      <p>stable: v0.0.0, released yesterday</p>
+      <p>last dev commit made yesterday</p>
+      <p>0 stars, 0 forks</p>
+    </div>
+    
+
+    <div class="scrollbar-outer">
+      <div class="scrollbar-inner"></div>
+    </div>
+    
+  </div>
+
+  <div class="overlays">
+    <img id="saosin-easter" src="res/misc/saosin.svg" alt="1/100 random event">
+    <a href="/" class="site unreactive-anchor">https://faction.im</a>
+  </div>
+</body>
+
+</html>

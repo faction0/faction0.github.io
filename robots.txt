@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /res/
+
+Disallow: /credits
+Disallow: /favicon.ico
+
+Disallow: /CNAME

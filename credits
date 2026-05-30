@@ -1,0 +1,27 @@
+favicon.ico: https://barnyard.fandom.com/wiki/Pig?file=Pig_Barnyard_Videogame.jpg | cropped and resized
+
+res/font/Adwaita*: https://gitlab.gnome.org/GNOME/adwaita-fonts | Reformatted into woff2
+res/font/NotoSansMono-Var.woff2: https://fonts.google.com/noto/specimen/Noto+Sans+Mono | Reformatted into woff2
+
+res/ico/apple.svg: https://www.svgrepo.com/svg/473543/apple
+res/ico/codeberg.svg: https://www.svgrepo.com/svg/349319/codeberg | recolored natively with svgrepo
+res/ico/db.svg: https://www.svgrepo.com/svg/498954/database
+res/ico/discord.svg: https://www.svgrepo.com/svg/378411/discord-fill
+res/ico/download.svg: https://www.svgrepo.com/svg/389761/download
+res/ico/github.svg: https://brand.github.com/foundations/logo
+res/ico/linux.svg: https://www.svgrepo.com/svg/473700/linux
+res/ico/mail.svg: https://www.svgrepo.com/svg/511917/email-1572
+res/ico/py.svg: https://www.svgrepo.com/svg/512738/python-127
+res/ico/rym.svg: https://commons.wikimedia.org/wiki/File:Rate_Your_Music_logo.svg | Monochromed
+res/ico/server.svg: https://www.svgrepo.com/svg/358169/server | cropped contentless areas.
+res/ico/taiko.svg: https://osu.ppy.sh/rankings/taiko/global/performance?filter=all | taken from custom font
+res/ico/windows.svg: https://www.svgrepo.com/svg/473831/windows
+
+res/img/faction.png: https://barnyard.fandom.com/wiki/Pig?file=Pig_Barnyard_Videogame.jpg | cropped
+
+res/misc/saosin.svg: Made with https://freefonts.co/fonts/dutch-801-roman
+
+All resources hosted on https://faction.im that meet all off the following requirements:
+-   directly stored on https://github.com/faction0/faction0.github.io
+-   not listed above
+are licensed under the MIT-0 License.

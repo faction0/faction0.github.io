@@ -1,21 +1,136 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="robots" content="noindex, nofollow">
-  <link rel="stylesheet" href="assets/main.css">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <title>faction - intro</title>
-</head>
-<body>
-    <object class= "main-svg-mobile" data="assets/mobile.svg" type="image/svg+xml"></object>
-    <object class= "main-svg-desktop" data="assets/desktop.svg" type="image/svg+xml"></object>
+  <link rel="stylesheet" href="res/desktop.css">
+  <link rel="stylesheet" href="res/mobile.css" media="(max-aspect-ratio: 0.95/1)">
 
-    <div id="loader-wrapper">
-        <p class="loader1"></p>
-        <p class="loader2"></p>
-        <p class="loader3"></p>
+  <meta property="og:title" content="faction">
+  <meta property="og:description" content="cybersecurity student. e-mail: me@faction.im">
+  <meta property="og:image" content="https://faction.im/res/img/faction.png">
+  <meta property="og:url" content="https://faction.im">
+  <meta name="theme-color" content="#AAAAAA">
+
+</head>
+
+<body>
+  <div class="desktop">
+    <div class="intro">
+      <img id="my-pic" title="me" class="pic" src="res/img/faction.png">
+      <div class="entry">
+        <div class="name">faction</div>
+        <div class="desc">cybersecurity student</div>
+        <div class="desc">i also develop stuff</div>
+      </div>
+      <div class="entry">
+        <div class="name">contact</div>
+        <div class="desc">
+          <img src="res/ico/mail.svg" title="E-Mail" alt="E-Mail">
+          me@faction.im</div>
+        <div class="desc">
+          <img src="res/ico/discord.svg" title="Discord" alt="Discord">
+          faction.im</div>
+      </div>
     </div>
+    <div class="section">
+
+      <div class="header">projects</div>
+
+      <div class="projects-row">
+
+         <div class="project left">
+          
+          <div class="title"><a href="mpd-local-scrobbler">mpd-local-scrobbler</a></div>
+          <div class="desc">tracks your mpd activity and stores it in a local database</div>
+
+          <div class="icons">
+            <img src="res/ico/py.svg" title="Python" alt="Python">
+            <img src="res/ico/db.svg" title="Database" alt="Database">
+          </div>
+
+        </div>
+
+        <div class="project right">
+          
+          <div class="title">soon</div>
+          <div class="desc">i think.</br>i hope....</div>
+
+          <div class="icons">
+            <img src="res/ico/py.svg" title="Python" alt="Python">
+            <img src="res/ico/db.svg" title="Database" alt="Database">
+            <img src="res/ico/server.svg" title="Server" alt="Server">
+          </div>
+
+        </div>
+
+       
+      </div>
+    </div>
+    <div class="section">
+      <div class="header">me around the net</div>
+
+      <div class="platforms">
+
+        <a href="https://codeberg.org/faction">
+          <img src="res/ico/codeberg.svg" title="Codeberg" alt="Codeberg">
+        </a>
+
+        <a href="https://github.com/faction0">
+          <img src="res/ico/github.svg" title="Github" alt="Github">
+        </a>
+        
+        <a href="https://osu.ppy.sh/u/faction">
+          <img src="res/ico/taiko.svg" title="Taiko" alt="Taiko">
+        </a>
+        <a href="https://rateyourmusic.com/~fatosintesis">
+          <img src="res/ico/rym.svg" title="RYM" alt="RateYourMusic">
+        </a>
+        
+
+      </div>
+    </div>
+    <div class="section">
+      <div class="header">
+        misc
+      </div>
+
+      <ul class="miscs">
+        <li><a href="https://gist.github.com/faction0">gists</a>
+          <span>quick snippets and thingies</span>
+        </li>
+        <li><a href="faction.asc">pgp</a>
+          <span>my public key (last updated June 1st 2026)</span>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="mobile">
+    
+    <p> working on the mobile view. </p>
+    
+  </div>
+
+  <div class="overlays">
+    <span class="mail">me@faction.im</span>
+    <span class="site">https://faction.im</span>
+    <img id="saosin-easter" src="res/misc/saosin.svg" alt="1/100 random event">
+  </div>
+
 </body>
-<!-- bro is clearly NOT a frontend developer-->
+
+<script>
+
+  // amazing and useful javascript i love javascript
+  // this is the only js i use on the whole site
+  
+  if (Math.random() < 0.01)
+    document.getElementById("saosin-easter").style.display = "block";
+
+  if (Math.random() < 0.5) {
+    const m = ['yo', 'yo irl', 'me irl', 'hola', 'ola', 'hi', '自分'];
+    document.getElementById("my-pic").title = m[Math.floor(Math.random() * m.length)];
+  }
+
+</script>
 </html>
