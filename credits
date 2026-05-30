@@ -3,12 +3,14 @@ favicon.ico: https://barnyard.fandom.com/wiki/Pig?file=Pig_Barnyard_Videogame.jp
 res/font/Adwaita*: https://gitlab.gnome.org/GNOME/adwaita-fonts | Reformatted into woff2
 res/font/NotoSansMono-Var.woff2: https://fonts.google.com/noto/specimen/Noto+Sans+Mono | Reformatted into woff2
 
+res/ico/android.svg: https://www.svgrepo.com/svg/508764/android
 res/ico/apple.svg: https://www.svgrepo.com/svg/473543/apple
 res/ico/codeberg.svg: https://www.svgrepo.com/svg/349319/codeberg | recolored natively with svgrepo
 res/ico/db.svg: https://www.svgrepo.com/svg/498954/database
 res/ico/discord.svg: https://www.svgrepo.com/svg/378411/discord-fill
 res/ico/download.svg: https://www.svgrepo.com/svg/389761/download
 res/ico/github.svg: https://brand.github.com/foundations/logo
+res/ico/iphone.svg: https://commons.wikimedia.org/wiki/File:Apple_iPhone.svg
 res/ico/linux.svg: https://www.svgrepo.com/svg/473700/linux
 res/ico/mail.svg: https://www.svgrepo.com/svg/511917/email-1572
 res/ico/py.svg: https://www.svgrepo.com/svg/512738/python-127
@@ -18,6 +20,7 @@ res/ico/taiko.svg: https://osu.ppy.sh/rankings/taiko/global/performance?filter=a
 res/ico/windows.svg: https://www.svgrepo.com/svg/473831/windows
 
 res/img/faction.png: https://barnyard.fandom.com/wiki/Pig?file=Pig_Barnyard_Videogame.jpg | cropped
+res/img/troll.jpg: https://knowyourmeme.com/photos/3265436-realistic-troll-face-hey-you-might-know-me-already
 
 res/misc/saosin.svg: Made with https://freefonts.co/fonts/dutch-801-roman
 

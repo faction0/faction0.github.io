@@ -5,7 +5,7 @@
 
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" href="res/mpd-local-scrobbler.css">
-  <link rel="stylesheet" href="res/mobile.css" media="(max-aspect-ratio: 0.95/1)">
+  <link rel="stylesheet" href="res/mpd-local-scrobbler-mobile.css" media="(max-aspect-ratio: 0.95/1)">
 
   <meta property="og:title" content="mpd-local-scrobbler">
   <meta property="og:description" content="Local scrobbler for MPD activity, accessible at any time and completely local.">
@@ -83,6 +83,16 @@
       </label>
     </div>
     
+    <div class="mobile-download-option">
+      <input class="distro-radio" type="radio" id="mobile" name="download-platform" value="4">
+      <label for="mobile" class="download-label">
+        <div class="option">
+          <div class="android-svg-wrapper"><img src="res/ico/android.svg"></div>
+          <div class="iphone-svg-wrapper"><img src="res/ico/iphone.svg"></div>
+        </div>
+      </label>
+    </div>
+
     <!-- <input type="checkbox" id="linux-ìnstructions-toggle" class="linux-checkbox"> -->
 
     <div class="download-info-wrapper linux-instructions-wrapper">
@@ -146,6 +156,12 @@
       </div>
     </div>
 
+    <div class="download-info-wrapper mobile-instructions-wrapper">
+      <div class="download-info">
+        <p>There are no plans for porting this to mobile</p>
+      </div>
+    </div>
+
     <div class="repo-info">
       <p>stable: v0.0.0, released yesterday</p>
       <p>last dev commit made yesterday</p>
@@ -160,7 +176,6 @@
   </div>
 
   <div class="overlays">
-    <img id="saosin-easter" src="res/misc/saosin.svg" alt="1/100 random event">
     <a href="/" class="site unreactive-anchor">https://faction.im</a>
   </div>
 </body>

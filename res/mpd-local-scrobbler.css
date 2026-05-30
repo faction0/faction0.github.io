@@ -194,7 +194,6 @@ a:hover { color: var(--fore-col-stronger); }
   transition: max-height 0.2s ease-out, opacity 0.2s ease-out, padding-top 0.2s ease-out, margin-top 0.2s ease-out;
 }
 
-
 .download-checkbox:checked ~ .download-options {
   padding-top: 2vh;
   max-height: 20vh;
@@ -202,9 +201,17 @@ a:hover { color: var(--fore-col-stronger); }
   margin-top: 2vh;
 }
 
+.download-checkbox:checked ~ .mobile-download-option {
+  padding-top: 2vw;
+  max-height: 22vw;
+  opacity: 1;
+  margin-top: 2vw;
+}
+
 .download-checkbox:not(:checked) ~ .linux-instructions-wrapper,
 .download-checkbox:not(:checked) ~ .windows-instructions-wrapper,
-.download-checkbox:not(:checked) ~ .macos-instructions-wrapper {
+.download-checkbox:not(:checked) ~ .macos-instructions-wrapper,
+.download-checkbox:not(:checked) ~ .mobile-instructions-wrapper {
   opacity: 0 !important;
   max-height: 0 !important ;
   overflow: hidden;
@@ -212,7 +219,8 @@ a:hover { color: var(--fore-col-stronger); }
 
 .linux-instructions-wrapper,
 .windows-instructions-wrapper,
-.macos-instructions-wrapper {
+.macos-instructions-wrapper,
+.mobile-instructions-wrapper {
   max-height: 0;
   opacity: 0;
   margin-top: 0;
@@ -227,7 +235,8 @@ a:hover { color: var(--fore-col-stronger); }
 
 .main:has(#linux:checked)   .linux-instructions-wrapper,
 .main:has(#windows:checked) .windows-instructions-wrapper,
-.main:has(#macos:checked)   .macos-instructions-wrapper {
+.main:has(#macos:checked)   .macos-instructions-wrapper,
+.main:has(#mobile:checked)   .mobile-instructions-wrapper {
   opacity: 1;
   max-height: fit-content;
 }
@@ -254,7 +263,6 @@ a:hover { color: var(--fore-col-stronger); }
   text-decoration: underline;
   font-weight: bold;
 }
-
 
 #arch:checked ~ .arch-install-instructions {
   opacity: 1;
@@ -370,12 +378,9 @@ a:hover { color: var(--fore-col-stronger); }
   margin-top: 3vh !important;
 }
 
-
 .linux-distro-instructions .code {
   margin-left: 5%;
 }
-
-
 
 .repo-info {
   display:flex;
@@ -490,4 +495,9 @@ a {
   position:absolute;
   bottom:5vh;
   right:5vh;
+}
+
+/* Hide mobile stuff */
+.mobile-download-option {
+  display:none;
 }

@@ -1,0 +1,228 @@
+
+.mobile-download-option {
+  display: flex;
+
+  justify-content: space-between;
+
+  max-height: 0;
+  opacity: 0;
+  margin-top: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out, opacity 0.2s ease-out, padding-top 0.2s ease-out, margin-top 0.2s ease-out;
+}
+
+body {
+  justify-content: center;
+  align-items: center;
+  
+  color: var(--main-col);
+
+  font-family: 'Adwaita Mono';
+  font-weight: normal;
+}
+
+
+.main {
+
+  --border-width: 0.5vw;
+
+  display:block;
+  border: var(--border-width) #000 solid;
+
+  height: 85vh;
+  padding: 3vw;
+  width: 85vw;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  overflow-y: auto;
+}
+
+
+
+
+
+/* everyone uses the back gesture / button */
+.header .go-back {
+  display: none;
+}
+
+/* no go-back, so more space */
+.header h1 {
+  margin-top: 1vw;
+  font-size: 6vw;
+}
+
+p {
+  font-size: 4vw;
+  font-weight: normal;
+
+  margin-bottom: 0;
+}
+
+
+.section-fancy {
+  height: 40vw;
+  margin-top: 2vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.section-fancy .photo {
+  display: none;
+}
+
+.section-fancy .list {
+  display: flex;
+  width: 100%;
+  
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-fancy .list .entry {
+  width: 80vw;
+  border: #000 var(--border-width) solid;
+  height: 15vw;
+}
+
+.section-fancy .list .entry p {
+  margin-left: 20%;
+  margin-top: 3vw;
+  width: 75%;
+  font-size: 7.5vw;
+}
+
+.section-fancy .list .entry .img-wrapper {
+  padding: 2vw;
+  float: left;
+  
+  width: 12vw;
+  height: auto;
+}
+
+.section-fancy .list .entry .img-wrapper img {
+  width: inherit;
+}
+
+.download-info p {
+  line-height: 4.75vw;
+  font-size: 3.75vw;
+}
+
+.download-info .code p {
+  padding: 2vw;
+  line-height: 2.6vw;
+  font-size: 1.7vw;
+}
+
+.download-options label {
+  border-width: var(--border-width);
+}
+
+
+.download-options .option {
+  height: 14vw;
+}
+
+.download-options .option .img-wrapper {
+  width: 13vw;
+}
+
+.download-options .option p {
+  display: none;
+}
+
+
+
+#arch:checked ~ .arch-install-instructions {
+  opacity: 1;
+  max-height: 60vw;
+}
+
+#debian:checked ~ .debian-install-instructions {
+  opacity: 1;
+  max-height: 14vw;
+}
+
+#fedora:checked ~ .fedora-install-instructions {
+  opacity: 1;
+  max-height: 14vw;
+}
+
+
+.mobile-download-option {
+  margin-top: 2vw;
+
+  height: 14vw;
+  width: 100%;
+}
+
+.mobile-download-option label {
+  border: var(--border-width) #000 solid;
+  width: 99%;
+}
+
+.mobile-download-option .option {
+  height: 100%;
+  min-width: 100%;
+
+
+  display: grid;
+  grid-auto-flow: column;
+  justify-items: center;
+  justify-content: normal;
+  align-items: center;
+}
+
+.mobile-download-option .option .android-svg-wrapper img {
+  height: 7vw;
+}
+
+.mobile-download-option .option .iphone-svg-wrapper img {
+  height: 7vw;
+}
+
+.overlays {
+  pointer-events: none;
+  display: block;
+
+  height: 85vh;
+  padding: 3vw;
+  width: 85vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+}
+
+.overlays .mail {
+  display: block;
+
+  position: absolute;
+  top: -1.5vw;
+  right: 5vw;
+
+  padding: 0 1vw;
+
+  font-size: 2vw;
+
+  background-color: white
+}
+
+.overlays .site {
+  position: absolute;
+  bottom: -1.4vw;
+  right: 5vw;
+
+  padding: 0 1vw;
+
+  font-size: 2.5vw;
+
+  background-color: white
+}
