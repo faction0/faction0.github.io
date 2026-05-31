@@ -1,0 +1,130 @@
+@font-face { font-family: 'Adwaita Mono'; src: url('font/AdwaitaMono-Regular.woff2') format('woff2'); font-weight: normal; font-style: normal }
+@font-face { font-family: 'Adwaita Mono'; src: url('font/AdwaitaMono-Bold.woff2')    format('woff2'); font-weight: bold;   font-style: bold   }
+@font-face { font-family: 'Adwaita Mono'; src: url('font/AdwaitaMono-Italic.woff2')  format('woff2'); font-weight: normal; font-style: italic   }
+
+@font-face { font-family: 'Noto Sans Mono'; src: url('font/NotoSansMono-Var.woff2') format('woff2'); font-weight: 100 900 }
+
+:root {
+  --back-col: #fff;
+  --fore-col: #000;
+  --fore-col-stronger: #aaa;
+  --fore-col-strong: #555;
+}
+
+body {
+  justify-content: center;
+  align-items: center;
+  
+  color: var(--main-col);
+
+  font-family: 'Adwaita Mono';
+  font-weight: normal;
+}
+
+
+.no-underline {
+  text-decoration: none;
+}
+
+img {
+  user-select: none;
+}
+
+
+p {
+  font-size: 2.35vh;
+  font-weight: normal;
+
+  margin-bottom: 0;
+}
+
+a {
+  pointer-events: all;
+}
+
+
+.main { scrollbar-width: none;}
+.main::-webkit-scrollbar { display: none; }
+
+.main {
+  --border-width: 0.3vh;
+
+  border: var(--border-width) #000 solid;
+  padding: 1vh;
+  width: 90.6vh;
+
+  height: 85vh;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  overflow-y: auto;
+}
+
+.main-wrapper {
+  position: relative;
+}
+
+a:link    { color: var(--fore-col)          }
+a:hover   { color: var(--fore-col-stronger) }
+a:visited { color: var(--fore-col)          }
+
+.scrollbar-outer {
+  position: absolute;
+  top: -3.75vh;
+  right: -1vh;
+  width: 0.7vh;
+  height: calc(100% + 5vh);
+  background: var(--back-col);
+}
+
+.scrollbar-inner {
+  width: 100%;
+  height: 6vh;
+  background: var(--fore-col);
+  
+  position: absolute; 
+  left: 0;
+
+  animation: scroll-progress linear;
+  animation-timeline: scroll(nearest);
+}
+
+@keyframes scroll-progress {
+  from { top: 0%; }
+  to   { top: calc(100% - 6vh); }
+}
+
+::selection {
+  background-color: var(--fore-col);
+  color: var(--back-col);
+}
+
+.overlays {
+  user-select: none;
+  
+  pointer-events: none;
+  padding: 1vh;
+  width: 90.6vh;
+  height: 85vh;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.overlays .site {
+  text-decoration: none;
+  position: absolute;
+  bottom: -1.35vh;
+  right: 5vh;
+
+  padding: 0 1vh;
+
+  font-size: 2vh;
+
+  background-color: white
+}

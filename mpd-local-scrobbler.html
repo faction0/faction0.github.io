@@ -4,6 +4,8 @@
   <title>faction - mpd-local-scrobbler</title>
 
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="res/universal.css">
+  <link rel="stylesheet" href="res/universal-mobile.css" media="(max-aspect-ratio: 0.95/1)">
   <link rel="stylesheet" href="res/mpd-local-scrobbler.css">
   <link rel="stylesheet" href="res/mpd-local-scrobbler-mobile.css" media="(max-aspect-ratio: 0.95/1)">
 
@@ -16,11 +18,10 @@
 </head>
 
 <body>
-  <div class="main">
-    
+  <div class="main"><div class="main-wrapper">
     <div class="header">
       <h1>mpd-local-scrobbler</h1>
-      <a href="/" class="go-back not-underlined-anchor"><<< go back</a>
+      <a href="/" class="go-back no-underline"><<< go back</a>
     </div>
 
     <div class="section-desc">
@@ -32,16 +33,16 @@
 
     <div class="section-fancy">
       <div class="list">
-        <a href="https://codeberg.org/faction/mpd-local-scrobbler" class="not-underlined-anchor">
+        <a href="https://codeberg.org/faction/mpd-local-scrobbler" class="no-underline">
         <div class="entry">
-          <div class="img-wrapper"><img src="res/ico/codeberg.svg"></div>
+          <div class="img-wrapper"><img draggable="false" src="res/ico/codeberg.svg"></div>
           <p>Source Code</p>
         </div>
         </a>
         
         <label for="download-toggle" class="download-label">
           <div class="entry">
-            <div class="img-wrapper"><img src="res/ico/download.svg"></div>
+            <div class="img-wrapper"><img draggable="false" src="res/ico/download.svg"></div>
             <p>Download</p>
           </div>
         </label>
@@ -49,46 +50,46 @@
       </div>
       
       <div class="photo">
-        <img src="res/img/mpd-scrob/struct.png">
+        <img draggable="false" src="res/img/mpd-scrob/struct.png">
       </div>
 
     </div>
 
-    <input type="checkbox" id="download-toggle" class="download-checkbox">
+    <input type="checkbox" id="download-toggle" class="invisible-input">
 
     <div class="download-options">
 
-      <input class="distro-radio" type="radio" id="linux" name="download-platform" value="1">
+      <input class="invisible-input" type="radio" id="linux" name="download-platform" value="1">
       <label for="linux" class="download-label">
         <div class="option">
-            <div class="img-wrapper"><img src="res/ico/linux.svg"></div>
+            <div class="img-wrapper"><img draggable="false" src="res/ico/linux.svg"></div>
             <p>Linux</p>
         </div>
       </label>
       
-      <input class="distro-radio" type="radio" id="windows" name="download-platform" value="2">
+      <input class="invisible-input" type="radio" id="windows" name="download-platform" value="2">
       <label for="windows" class="download-label">
         <div class="option">
-            <div class="img-wrapper"><img src="res/ico/windows.svg"></div>
+            <div class="img-wrapper"><img draggable="false" src="res/ico/windows.svg"></div>
             <p>Windows</p>
         </div>
       </label>
 
-      <input class="distro-radio" type="radio" id="macos" name="download-platform" value="3">
+      <input class="invisible-input" type="radio" id="macos" name="download-platform" value="3">
       <label for="macos" class="download-label">
-       <div class="option">
-          <div class="img-wrapper"><img src="res/ico/apple.svg"></div>
+      <div class="option">
+          <div class="img-wrapper"><img draggable="false" src="res/ico/apple.svg"></div>
           <p>MacOS</p>
       </div>
       </label>
     </div>
     
     <div class="mobile-download-option">
-      <input class="distro-radio" type="radio" id="mobile" name="download-platform" value="4">
+      <input class="invisible-input" type="radio" id="mobile" name="download-platform" value="4">
       <label for="mobile" class="download-label">
         <div class="option">
-          <div class="android-svg-wrapper"><img src="res/ico/android.svg"></div>
-          <div class="iphone-svg-wrapper"><img src="res/ico/iphone.svg"></div>
+          <div class="android-svg-wrapper"><img draggable="false" src="res/ico/android.svg"></div>
+          <div class="iphone-svg-wrapper"><img draggable="false" src="res/ico/iphone.svg"></div>
         </div>
       </label>
     </div>
@@ -110,7 +111,7 @@
         <p>Otherwise, here are some pre-builts and how-tos for different distros:</p>
         
         <!-- Debian Instructions -->
-        <input class="distro-radio" type="radio" id="debian" name="linux-distro" value="1">
+        <input class="invisible-input" type="radio" id="debian" name="linux-distro" value="1">
         <label for="debian" class="debian-opener"><p>Debian / Ubuntu >>></p></label>
 
         <div class="linux-distro-instructions debian-install-instructions">
@@ -118,7 +119,7 @@
         </div>
 
         <!-- Arch Instructions -->
-        <input class="distro-radio" type="radio" id="arch" name="linux-distro" value="2">
+        <input class="invisible-input" type="radio" id="arch" name="linux-distro" value="2">
         <label for="arch" class="arch-opener"><p>Arch Linux / Manjaro / EndeavourOS >>></p></label>
         
         <div class="linux-distro-instructions arch-install-instructions">
@@ -134,7 +135,7 @@
         </div>
 
         <!-- Fedora Instructions -->
-        <input class="distro-radio" type="radio" id="fedora" name="linux-distro" value="3">
+        <input class="invisible-input" type="radio" id="fedora" name="linux-distro" value="3">
         <label for="fedora" class="fedora-opener"><p>Fedora >>></p></label>
         
         <div class="linux-distro-instructions fedora-install-instructions">
@@ -172,11 +173,10 @@
     <div class="scrollbar-outer">
       <div class="scrollbar-inner"></div>
     </div>
-    
-  </div>
+  </div></div>
 
   <div class="overlays">
-    <a href="/" class="site unreactive-anchor">https://faction.im</a>
+    <a href="/" class="site" draggable="false">https://faction.im</a>
   </div>
 </body>
 

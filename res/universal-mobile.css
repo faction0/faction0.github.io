@@ -1,0 +1,7 @@
+.scrollbar-outer {
+  position: absolute;
+  top: -4.5vw;
+  right: -4%;
+  width: 2%;
+  height: calc(101.5% + 4.65vw);
+}

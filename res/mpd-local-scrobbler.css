@@ -1,130 +1,47 @@
-@font-face {
-  font-family: 'Adwaita Mono';
-  src: url('font/AdwaitaMono-Regular.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-}
+/* I[====> Misc <=== */
 
-@font-face {
-  font-family: 'Adwaita Mono';
-  src: url('font/AdwaitaMono-Bold.woff2') format('woff2');
-  font-weight: bold;
-  font-style: bold;
-}
-
-@font-face {
-  font-family: 'Adwaita Mono';
-  src: url('font/AdwaitaMono-Italic.woff2') format('woff2');
-  font-weight: normal;
-  font-style: italic;
-}
-
-
-@font-face {
-  font-family: 'Noto Sans Mono';
-  src: url('font/NotoSansMono-Var.woff2') format('woff2');
-  font-weight: 100 900;
-}
-
-
-:root {
-  --back-col: #fff;
-  --fore-col: #000;
-  --fore-col-stronger: #aaa;
-  --fore-col-strong: #555;
-}
-
-
-.download-checkbox,
-.linux-checkbox,
-.distro-radio {
+.invisible-input {
   position: absolute;
   height: 0;
   width: 0;
   pointer-events: none;
 }
 
-.download-label {
-  cursor: pointer;
+/* Hide mobile stuff */
+.mobile-download-option {
+  display:none;
 }
 
+/* ===> Project Description <====]II[====> Header <=== */
 
-/* Scrollbar */
-
-/* Hide scrollbar */
-.main { scrollbar-width: none;}
-.main::-webkit-scrollbar { display: none; }
-
-
-.main {
-  --border-width: 0.3vh;
-
-  border: var(--border-width) #000 solid;
-  padding: 1vh;
-  width: 90.6vh;
-
-  height: 85vh;
-
-  position: absolute;
-  top: 50%;
+.header h1 {
+  position: relative;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%);
 
-  overflow-y: auto;
+  font-size: 3.72vh;
+  font-weight: bold;
+
+  padding-bottom: 1.2vh;
+  margin-bottom: 2.4vh;
+  border-bottom: #000 0.84vh solid;
+  width: fit-content;
 }
 
-
-/* Background */
-.scrollbar-outer {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 0.7vh;
-  height: 100%;
-  background: var(--back-col);
-  z-index: 9999;
-}
-
-/* 3. Style and animate the thumb */
-.scrollbar-inner {
+.header .go-back {
+  font-size: 2.4vh;
   position: absolute;
   top: 0;
-  width: 0.7vh;
-  height: 6vh; /* Fixed height for the thumb */
-  background: var(--fore-col);
-  
-  /* Bind the animation to the document's scroll percentage */
-  animation: scrollbar-thingy linear forwards;
-  animation-timeline: scroll(nearest);
 }
 
-@keyframes scrollbar-thingy {
-  0%   { top: 0          }
-  100% { top: 100% }
-}
-
-
-
-::selection {
-  background-color: var(--fore-col);
-  color: var(--back-col);
-}
-
-a:link { color: var(--fore-col); }
-a:visited { color: var(--fore-col); }
-a:hover { color: var(--fore-col-stronger); }
-
-.not-underlined-anchor {
-  text-decoration: none;
-}
-
+/* ===> Header <====]II[====> Project Description <=== */
 
 /* desc */
 .section-desc {
   margin-top: 2.4vh;
 }
 
-/* image and button list */
+/* ===> Project Description <====]II[====> Image and Source Code / Download Buttons <=== */
 
 .section-fancy {
   height: 22vh;
@@ -176,6 +93,11 @@ a:hover { color: var(--fore-col-stronger); }
   height: 100%;
 }
 
+.download-label {
+  cursor: pointer;
+}
+
+/* ===> Image and Source Code / Download Buttons <====]II[====> Linux / Windows / MacOS Buttons <=== */
 
 .download-options {
   display: flex;
@@ -192,91 +114,6 @@ a:hover { color: var(--fore-col-stronger); }
   margin-top: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out, opacity 0.2s ease-out, padding-top 0.2s ease-out, margin-top 0.2s ease-out;
-}
-
-.download-checkbox:checked ~ .download-options {
-  padding-top: 2vh;
-  max-height: 20vh;
-  opacity: 1;
-  margin-top: 2vh;
-}
-
-.download-checkbox:checked ~ .mobile-download-option {
-  padding-top: 2vw;
-  max-height: 22vw;
-  opacity: 1;
-  margin-top: 2vw;
-}
-
-.download-checkbox:not(:checked) ~ .linux-instructions-wrapper,
-.download-checkbox:not(:checked) ~ .windows-instructions-wrapper,
-.download-checkbox:not(:checked) ~ .macos-instructions-wrapper,
-.download-checkbox:not(:checked) ~ .mobile-instructions-wrapper {
-  opacity: 0 !important;
-  max-height: 0 !important ;
-  overflow: hidden;
-}
-
-.linux-instructions-wrapper,
-.windows-instructions-wrapper,
-.macos-instructions-wrapper,
-.mobile-instructions-wrapper {
-  max-height: 0;
-  opacity: 0;
-  margin-top: 0;
-  overflow: hidden;
-  transition: opacity 0.2s ease-out;
-}
-
-.linux-distro-opener {
-  text-decoration: underline;
-  user-select: none;
-}
-
-.main:has(#linux:checked)   .linux-instructions-wrapper,
-.main:has(#windows:checked) .windows-instructions-wrapper,
-.main:has(#macos:checked)   .macos-instructions-wrapper,
-.main:has(#mobile:checked)   .mobile-instructions-wrapper {
-  opacity: 1;
-  max-height: fit-content;
-}
-
-.arch-install-instructions,
-.fedora-install-instructions,
-.debian-install-instructions {
-  max-height: 0;
-  opacity: 0;
-  margin-top: 0;
-  transition: opacity 0.1s linear, max-height 0.2s ease-out;
-}
-
-
-#arch:not(:checked)   ~ .arch-install-instructions,
-#debian:not(:checked) ~ .debian-install-instructions,
-#fedora:not(:checked) ~ .fedora-install-instructions {
-  pointer-events: none;
-}
-
-#arch:checked   ~ .arch-opener p,
-#debian:checked ~ .debian-opener p,
-#fedora:checked ~ .fedora-opener p {
-  text-decoration: underline;
-  font-weight: bold;
-}
-
-#arch:checked ~ .arch-install-instructions {
-  opacity: 1;
-  max-height: 30vh;
-}
-
-#debian:checked ~ .debian-install-instructions {
-  opacity: 1;
-  max-height: 6vh;
-}
-
-#fedora:checked ~ .fedora-install-instructions {
-  opacity: 1;
-  max-height: 6vh;
 }
 
 .download-options label {
@@ -326,6 +163,90 @@ a:hover { color: var(--fore-col-stronger); }
   width: 100%;
 }
 
+.main:has(#download-toggle:checked) .download-options {
+  padding-top: 2vh;
+  max-height: 20vh;
+  opacity: 1;
+  margin-top: 2vh;
+}
+
+.main:has(#download-toggle:checked) .mobile-download-option {
+  padding-top: 2vw;
+  max-height: 22vw;
+  opacity: 1;
+  margin-top: 2vw;
+}
+
+.main:has(#download-toggle:not(:checked)) .linux-instructions-wrapper   ,
+.main:has(#download-toggle:not(:checked)) .windows-instructions-wrapper ,
+.main:has(#download-toggle:not(:checked)) .macos-instructions-wrapper   ,
+.main:has(#download-toggle:not(:checked)) .mobile-instructions-wrapper  {
+  opacity: 0 !important;
+  max-height: 0 !important ;
+  margin-top: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out, opacity 0.2s ease-out, padding-top 0.2s ease-out, margin-top 0.2s ease-out;
+}
+
+.linux-instructions-wrapper,
+.windows-instructions-wrapper,
+.macos-instructions-wrapper,
+.mobile-instructions-wrapper {
+  max-height: 0;
+  opacity: 0;
+  margin-top: 0;
+  overflow: hidden;
+  transition: opacity 0.2s ease-out;
+}
+
+/* ===> Linux / Windows / MacOS Buttons <====]II[====> Linux Distro Specific Instructions <=== */
+
+.main:has(#linux:checked)   .linux-instructions-wrapper,
+.main:has(#windows:checked) .windows-instructions-wrapper,
+.main:has(#macos:checked)   .macos-instructions-wrapper,
+.main:has(#mobile:checked)   .mobile-instructions-wrapper {
+  opacity: 1;
+  height: fit-content;
+  max-height: 100vh;
+}
+
+.arch-install-instructions,
+.fedora-install-instructions,
+.debian-install-instructions {
+  max-height: 0;
+  opacity: 0;
+  margin-top: 0;
+  transition: opacity 0.1s linear, max-height 0.2s ease-out;
+}
+
+#arch:not(:checked)   ~ .arch-install-instructions,
+#debian:not(:checked) ~ .debian-install-instructions,
+#fedora:not(:checked) ~ .fedora-install-instructions {
+  pointer-events: none;
+}
+
+#arch:checked   ~ .arch-opener p,
+#debian:checked ~ .debian-opener p,
+#fedora:checked ~ .fedora-opener p {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+#arch:checked ~ .arch-install-instructions {
+  opacity: 1;
+  max-height: 30vh;
+}
+
+#debian:checked ~ .debian-install-instructions {
+  opacity: 1;
+  max-height: 6vh;
+}
+
+#fedora:checked ~ .fedora-install-instructions {
+  opacity: 1;
+  max-height: 6vh;
+}
+
 
 .download-info-wrapper {
   width: 100%;
@@ -359,12 +280,10 @@ a:hover { color: var(--fore-col-stronger); }
   color: var(--fore-col);
 }
 
-
 .download-info .pre-builts-divisor {
   height: 2vh;
   border-bottom: 0.3vh #000 solid;
 }
-
 
 .linux-distro-instructions {
   margin-left: 5%;
@@ -381,6 +300,8 @@ a:hover { color: var(--fore-col-stronger); }
 .linux-distro-instructions .code {
   margin-left: 5%;
 }
+
+/* ===> Linux Distro Specific Instructions <====]II[====> Repository Stats <=== */
 
 .repo-info {
   display:flex;
@@ -399,105 +320,4 @@ a:hover { color: var(--fore-col-stronger); }
 
 .repo-info p {
   margin-top: 1vh;
-}
-
-body {
-  justify-content: center;
-  align-items: center;
-  
-  color: var(--main-col);
-
-  font-family: 'Adwaita Mono';
-  font-weight: normal;
-}
-
-.header h1 {
-  position: relative;
-  left: 50%;
-  transform: translate(-50%);
-
-  font-size: 3.72vh;
-  font-weight: bold;
-
-  padding-bottom: 1.2vh;
-  margin-bottom: 2.4vh;
-  border-bottom: #000 0.84vh solid;
-  width: fit-content;
-}
-
-.header .go-back {
-  font-size: 2.4vh;
-  position: absolute;
-  top: 4.2vh;
-}
-
-p {
-  font-size: 2.35vh;
-  font-weight: normal;
-
-  margin-bottom: 0;
-}
-
-img {
-  user-select: none;
-}
-
-
-.separator-a {
-  margin: 3vh 0;
-
-  margin-right: 66%;
-  border-bottom: #000 0.84vh solid;
-}
-
-a {
-  pointer-events: all;
-}
-
-.overlays {
-  user-select: none;
-  
-  pointer-events: none;
-  padding: 1vh;
-  width: 90.6vh;
-  height: 85vh;
-
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.overlays .mail {
-  display: none;
-}
-
-.overlays .site {
-  position: absolute;
-  bottom: -1.35vh;
-  right: 5vh;
-
-  padding: 0 1vh;
-
-  font-size: 2vh;
-
-  background-color: white
-}
-
-#saosin-easter {
-  display: none;
-
-  /* https://codepen.io/sosuke/pen/Pjoqqp how do you even come up with this */
-  filter: invert(43%) sepia(0%) saturate(1180%) hue-rotate(177deg) brightness(91%) contrast(77%) opacity(12%);
-
-  width:40vh;
-
-  position:absolute;
-  bottom:5vh;
-  right:5vh;
-}
-
-/* Hide mobile stuff */
-.mobile-download-option {
-  display:none;
 }

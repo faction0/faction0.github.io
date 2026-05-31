@@ -139,6 +139,10 @@ p {
 
 
 
+.main:has(#linux:checked) .linux-instructions-wrapper {
+  max-height: 140vw;
+}
+
 #arch:checked ~ .arch-install-instructions {
   opacity: 1;
   max-height: 60vw;
@@ -170,7 +174,6 @@ p {
 .mobile-download-option .option {
   height: 100%;
   min-width: 100%;
-
 
   display: grid;
   grid-auto-flow: column;
