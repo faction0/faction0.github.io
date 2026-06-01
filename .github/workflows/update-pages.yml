@@ -1,0 +1,46 @@
+name: i love ai
+
+on:
+  pull_request:
+    branches:
+      - main
+    types:
+      - closed
+
+jobs:
+  build-and-deploy:
+    # Only run the steps if the PR was actually merged (not just closed/declined)
+    # AND ensure the source branch of that PR was specifically 'dev'
+    if: github.event.pull_request.merged == true && github.event.pull_request.head.ref == 'dev'
+    
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write # Grants the token permission to commit changes back to the repo
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js Runtime
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run Page Updater Script
+        working-directory: ./evil
+        run: node update-pages.js 
+
+      - name: Commit and Push Updated Pages
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # Check if there are actual changes to commit so the pipeline doesn't error out
+          if [ -n "$(git status --porcelain)" ]; then
+            git add index.html
+            git commit -m "chore: auto-update page metrics [skip ci]"
+            git push
+          else
+            echo "No changes detected in index.html, skipping commit."
+          fi
