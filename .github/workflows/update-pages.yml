@@ -38,9 +38,9 @@ jobs:
           
           # Check if there are actual changes to commit so the pipeline doesn't error out
           if [ -n "$(git status --porcelain)" ]; then
-            git add index.html
+            git add mpd-local-scrobbler.html
             git commit -m "chore: auto-update page metrics [skip ci]"
             git push
           else
-            echo "No changes detected in index.html, skipping commit."
+            echo "No changes detected in mpd-local-scrobbler.html, skipping commit."
           fi
