@@ -1,18 +1,12 @@
 name: i love ai
 
 on:
-  pull_request:
-    branches:
-      - main
-    types:
-      - closed
+  schedule:
+    - cron: '52 2 * * *'
+  workflow_dispatch: # Keeps a manual trigger button in the GitHub UI just in case you want to force an update
 
 jobs:
   build-and-deploy:
-    # Only run the steps if the PR was actually merged (not just closed/declined)
-    # AND ensure the source branch of that PR was specifically 'dev'
-    if: github.event.pull_request.merged == true && github.event.pull_request.head.ref == 'dev'
-    
     runs-on: ubuntu-latest
 
     permissions:
