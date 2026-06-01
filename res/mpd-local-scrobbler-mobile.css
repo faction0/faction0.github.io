@@ -1,3 +1,6 @@
+@import "universal-mobile.css";
+
+/* I[====> Misc <=== */
 
 .mobile-download-option {
   display: flex;
@@ -11,46 +14,12 @@
   transition: max-height 0.2s ease-out, opacity 0.2s ease-out, padding-top 0.2s ease-out, margin-top 0.2s ease-out;
 }
 
-body {
-  justify-content: center;
-  align-items: center;
-  
-  color: var(--main-col);
+/* ===> Misc <====]II[====> Header <=== */
 
-  font-family: 'Adwaita Mono';
-  font-weight: normal;
-}
-
-
-.main {
-
-  --border-width: 0.5vw;
-
-  display:block;
-  border: var(--border-width) #000 solid;
-
-  height: 85vh;
-  padding: 3vw;
-  width: 85vw;
-
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-  overflow-y: auto;
-}
-
-
-
-
-
-/* everyone uses the back gesture / button */
 .header .go-back {
   display: none;
 }
 
-/* no go-back, so more space */
 .header h1 {
   margin-top: 1vw;
   font-size: 6vw;
@@ -63,6 +32,7 @@ p {
   margin-bottom: 0;
 }
 
+/* ===> Header <====]II[====> Image and Source Code / Download Buttons <=== */
 
 .section-fancy {
   height: 40vw;
@@ -86,8 +56,9 @@ p {
 
 .section-fancy .list .entry {
   width: 80vw;
-  border: #000 var(--border-width) solid;
   height: 15vw;
+  
+  border: var(--border-width) solid var(--fore-col);
 }
 
 .section-fancy .list .entry p {
@@ -109,21 +80,11 @@ p {
   width: inherit;
 }
 
-.download-info p {
-  line-height: 4.75vw;
-  font-size: 3.75vw;
-}
-
-.download-info .code p {
-  padding: 2vw;
-  line-height: 2.6vw;
-  font-size: 1.7vw;
-}
+/* ===> Image and Source Code / Download Buttons <====]II[====> Linux / Windows / MacOS / Android || IPhone Buttons <=== */
 
 .download-options label {
   border-width: var(--border-width);
 }
-
 
 .download-options .option {
   height: 14vw;
@@ -137,28 +98,6 @@ p {
   display: none;
 }
 
-
-
-.main:has(#linux:checked) .linux-instructions-wrapper {
-  max-height: 140vw;
-}
-
-#arch:checked ~ .arch-install-instructions {
-  opacity: 1;
-  max-height: 60vw;
-}
-
-#debian:checked ~ .debian-install-instructions {
-  opacity: 1;
-  max-height: 14vw;
-}
-
-#fedora:checked ~ .fedora-install-instructions {
-  opacity: 1;
-  max-height: 14vw;
-}
-
-
 .mobile-download-option {
   margin-top: 2vw;
 
@@ -167,7 +106,7 @@ p {
 }
 
 .mobile-download-option label {
-  border: var(--border-width) #000 solid;
+  border: var(--border-width) solid var(--fore-col);
   width: 99%;
 }
 
@@ -190,42 +129,36 @@ p {
   height: 7vw;
 }
 
-.overlays {
-  pointer-events: none;
-  display: block;
+/* ===> Linux / Windows / MacOS / Android || IPhone Buttons <====]II[====> Linux Distro Specific Instructions <=== */
 
-  height: 85vh;
-  padding: 3vw;
-  width: 85vw;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  
+.main:has(#linux:checked) .linux-instructions-wrapper {
+  max-height: 140vw;
 }
 
-.overlays .mail {
-  display: block;
-
-  position: absolute;
-  top: -1.5vw;
-  right: 5vw;
-
-  padding: 0 1vw;
-
-  font-size: 2vw;
-
-  background-color: white
+#arch:checked ~ .arch-install-instructions {
+  opacity: 1;
+  max-height: 60vw;
 }
 
-.overlays .site {
-  position: absolute;
-  bottom: -1.4vw;
-  right: 5vw;
+#debian:checked ~ .debian-install-instructions {
+  opacity: 1;
+  max-height: 14vw;
+}
 
-  padding: 0 1vw;
+#fedora:checked ~ .fedora-install-instructions {
+  opacity: 1;
+  max-height: 14vw;
+}
 
-  font-size: 2.5vw;
+/* ===> Linux Distro Specific Instructions <====]II[====> Download Information <=== */
 
-  background-color: white
+.download-info p {
+  line-height: 4.75vw;
+  font-size: 3.75vw;
+}
+
+.download-info .code p {
+  padding: 2vw;
+  line-height: 2.6vw;
+  font-size: 1.7vw;
 }

@@ -1,3 +1,5 @@
+@import "universal.css";
+
 /* I[====> Misc <=== */
 
 .invisible-input {
@@ -7,7 +9,6 @@
   pointer-events: none;
 }
 
-/* Hide mobile stuff */
 .mobile-download-option {
   display:none;
 }
@@ -24,7 +25,7 @@
 
   padding-bottom: 1.2vh;
   margin-bottom: 2.4vh;
-  border-bottom: #000 0.84vh solid;
+  border-bottom: var(--border-width-thick) solid var(--fore-col)  ;
   width: fit-content;
 }
 
@@ -36,7 +37,6 @@
 
 /* ===> Header <====]II[====> Project Description <=== */
 
-/* desc */
 .section-desc {
   margin-top: 2.4vh;
 }
@@ -61,7 +61,7 @@
 
 .section-fancy .list .entry {
   width: 31vh;
-  border: #000 0.36vh solid;
+  border: var(--border-width-meaty) solid var(--fore-col);
   height: 7vh;
 }
 
@@ -104,7 +104,7 @@
 
   justify-content: space-between;
 
-  background-image: linear-gradient(#000, #000);
+  background-image: linear-gradient(var(--fore-col), var(--fore-col));
   background-position: top center;
   background-size: 80% 0.5vh;
   background-repeat: no-repeat;
@@ -118,7 +118,7 @@
 
 .download-options label {
   width: 30%;
-  border: #000 0.36vh solid;
+  border: var(--border-width-meaty) solid var(--fore-col);
 }
 
 .download-options .option {
@@ -247,6 +247,23 @@
   max-height: 6vh;
 }
 
+.linux-distro-instructions {
+  margin-left: 5%;
+}
+
+.linux-distro-instructions p {
+  margin-top: 1vh;
+}
+
+.linux-distro-instructions .new-instruction {
+  margin-top: 3vh !important;
+}
+
+.linux-distro-instructions .code {
+  margin-left: 5%;
+}
+
+/* ===> Linux Distro Specific Instructions <====]II[====> Download Information <=== */
 
 .download-info-wrapper {
   width: 100%;
@@ -282,23 +299,7 @@
 
 .download-info .pre-builts-divisor {
   height: 2vh;
-  border-bottom: 0.3vh #000 solid;
-}
-
-.linux-distro-instructions {
-  margin-left: 5%;
-}
-
-.linux-distro-instructions p {
-  margin-top: 1vh;
-}
-
-.linux-distro-instructions .new-instruction {
-  margin-top: 3vh !important;
-}
-
-.linux-distro-instructions .code {
-  margin-left: 5%;
+  border-bottom: var(--border-width) solid var(--fore-col);
 }
 
 /* ===> Linux Distro Specific Instructions <====]II[====> Repository Stats <=== */
@@ -312,7 +313,7 @@
   margin-top: 2vh;
   padding-top: 1vh;
 
-  background-image: linear-gradient(#000, #000);
+  background-image: linear-gradient(var(--fore-col), var(--fore-col));
   background-position: top center;
   background-size: 60% 0.5vh;
   background-repeat: no-repeat;

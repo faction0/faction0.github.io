@@ -9,6 +9,10 @@
   --fore-col: #000;
   --fore-col-stronger: #aaa;
   --fore-col-strong: #555;
+
+  --border-width: 0.3vh;
+  --border-width-meaty: 0.36vh;
+  --border-width-thick: 0.84vh;
 }
 
 body {
@@ -21,7 +25,6 @@ body {
   font-weight: normal;
 }
 
-
 .no-underline {
   text-decoration: none;
 }
@@ -29,7 +32,6 @@ body {
 img {
   user-select: none;
 }
-
 
 p {
   font-size: 2.35vh;
@@ -42,14 +44,11 @@ a {
   pointer-events: all;
 }
 
-
 .main { scrollbar-width: none;}
 .main::-webkit-scrollbar { display: none; }
 
 .main {
-  --border-width: 0.3vh;
-
-  border: var(--border-width) #000 solid;
+  border: var(--border-width) var(--fore-col) solid;
   padding: 1vh;
   width: 90.6vh;
 
@@ -126,5 +125,5 @@ a:visited { color: var(--fore-col)          }
 
   font-size: 2vh;
 
-  background-color: white
+  background-color: var(--back-col)
 }
