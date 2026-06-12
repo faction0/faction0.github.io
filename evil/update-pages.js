@@ -166,6 +166,98 @@ async function updatePages() {
   html = replaceHTMLElem(html, 'repo-stats', mpdscrobblerinfo["repo-stats"])
 
   fs.writeFileSync('../mpd-local-scrobbler.html', html);
+
+  // mpd-rpc-py
+  // repo: https://codeberg.org/faction/mpd-rpc-py
+
+  // need to get:
+  // latest dev commit date
+  // star count
+
+  console.log("generating new info for mpd-rpc-py...");
+  var mpdrpcinfo = undefined
+
+  {
+    currentTask = "getting latest dev commit date";
+    console.log(currentTask);
+
+    let lastDevDate = await ( async () => {
+      try {
+        const r = await fetch('https://codeberg.org/api/v1/repos/faction/mpd-rpc-py/commits?sha=dev&stat=false&verification=false&files=false&page=1&limit=1', {
+          method: 'GET',
+          headers: {
+            'accept': 'application/json'
+          }
+        });
+
+        const data = await r.text();
+        const jobj = JSON.parse(data);
+
+        if (!Array.isArray(jobj) || !jobj[0] || !jobj[0]["created"])
+          throw Error('unacceptable response');
+
+        const date = new Date(jobj[0]["created"]);
+
+        if (isNaN(date))
+          throw Error('unparsable response');
+
+        return getElapsedSince(date);
+
+      } catch (error) {
+        console.error(`Error whilst ${currentTask}: `, error);
+        process.exit(1);
+      }
+    })();
+
+    console.log(`result: ${lastDevDate}`)
+
+    // =====
+
+    currentTask = "getting repo star count";
+    console.log(currentTask);
+
+    let starsCount = await ( async () => {
+      try {
+        const r = await fetch('https://codeberg.org/api/v1/repos/faction/mpd-rpc-py', {
+          method: 'GET',
+          headers: {
+            'accept': 'application/json'
+          }
+        });
+
+        const data = await r.text();
+        const jobj = JSON.parse(data);
+        
+        if (!jobj || !('stars_count' in jobj))
+          throw Error('unacceptable response');
+
+        if (!Number.isInteger(jobj['stars_count']))
+          throw Error('unparsable response');
+
+        return jobj['stars_count']
+
+      } catch (error) {
+        console.error(`Error whilst ${currentTask}: `, error);
+        process.exit(1);
+      }
+    })();
+    
+    console.log(`result: ${starsCount}`)
+    
+    // get all info out of the scope
+    mpdrpcinfo = {
+      'repo-dev': `last dev commit made ${lastDevDate}`,
+      'repo-stats': (starsCount == 1 ? '1 star' : `${starsCount} stars`)
+    }
+  }
+  
+  // Update
+  var html = fs.readFileSync('../mpd-rpc-py.html', 'utf8');
+
+  html = replaceHTMLElem(html, 'repo-dev', mpdrpcinfo["repo-dev"])
+  html = replaceHTMLElem(html, 'repo-stats', mpdrpcinfo["repo-stats"])
+
+  fs.writeFileSync('../mpd-rpc-py.html', html);
 }
 
 updatePages();

@@ -1,0 +1,325 @@
+@import "universal.css";
+
+/* I[====> Misc <=== */
+
+.invisible-input {
+  position: absolute;
+  height: 0;
+  width: 0;
+  pointer-events: none;
+}
+
+.mobile-download-option {
+  display:none;
+}
+
+/* ===> Project Description <====]II[====> Header <=== */
+
+.header h1 {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+
+  font-size: 3.72vh;
+  font-weight: bold;
+
+  padding-bottom: 1.2vh;
+  margin-bottom: 2.4vh;
+  border-bottom: var(--border-width-thick) solid var(--fore-col)  ;
+  width: fit-content;
+}
+
+.header .go-back {
+  font-size: 2.4vh;
+  position: absolute;
+  top: 0;
+}
+
+/* ===> Header <====]II[====> Project Description <=== */
+
+.section-desc {
+  margin-top: 2.4vh;
+}
+
+/* ===> Project Description <====]II[====> Image and Source Code / Download Buttons <=== */
+
+.section-fancy {
+  height: 22vh;
+  margin-top: 2vh;
+  display: flex;
+  justify-content: space-around;
+}
+
+.section-fancy .list {
+  display: flex;
+  height: 100%;
+  
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-fancy .list .entry {
+  width: 31vh;
+  border: var(--border-width-meaty) solid var(--fore-col);
+  height: 7vh;
+}
+
+.section-fancy .list .entry p {
+  margin-left: 7.1vh;
+  margin-top: 1.35vh;
+  width: 75%;
+  font-size: 3.5vh;
+}
+
+.section-fancy .list .entry .img-wrapper {
+  padding: 1vh;
+  float: left;
+  
+  width: 5vh;
+  height: auto;
+}
+
+.section-fancy .list .entry .img-wrapper img {
+  width: inherit;
+}
+
+.section-fancy .photo {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+.section-fancy .photo img {
+  height: 80%;
+}
+
+.download-label {
+  cursor: pointer;
+}
+
+/* ===> Image and Source Code / Download Buttons <====]II[====> Linux / Windows / MacOS Buttons <=== */
+
+.download-options {
+  display: flex;
+
+  justify-content: space-between;
+
+  background-image: linear-gradient(var(--fore-col), var(--fore-col));
+  background-position: top center;
+  background-size: 80% 0.5vh;
+  background-repeat: no-repeat;
+
+  max-height: 0;
+  opacity: 0;
+  margin-top: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out, opacity 0.2s ease-out, padding-top 0.2s ease-out, margin-top 0.2s ease-out;
+}
+
+.download-options label {
+  width: 30%;
+  border: var(--border-width-meaty) solid var(--fore-col);
+}
+
+.download-options .option {
+
+  display: grid;
+  height: 7vh;
+  width: 100%;
+  float: left;
+
+  grid-auto-flow: column;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.download-options .option p {
+  font-size: 3.5vh;
+  
+  margin: 0;
+  float: left;
+}
+
+.download-options :nth-child(4) p {
+  margin-left: 1vh;
+}
+
+.download-options :nth-child(6) p {
+  margin-top: 0.3vh;
+  margin-left: 0.2vh;
+}
+
+.download-options .option .img-wrapper {
+  width: 6.5vh;
+  height: 100%;
+  float:left;
+  display: grid;
+  place-items: center;
+}
+
+.download-options .option .img-wrapper img {
+  width: 100%;
+}
+
+.main:has(#download-toggle:checked) .download-options {
+  padding-top: 2vh;
+  max-height: 20vh;
+  opacity: 1;
+  margin-top: 2vh;
+}
+
+.main:has(#download-toggle:checked) .mobile-download-option {
+  padding-top: 2vw;
+  max-height: 22vw;
+  opacity: 1;
+  margin-top: 2vw;
+}
+
+.main:has(#download-toggle:not(:checked)) .linux-instructions-wrapper   ,
+.main:has(#download-toggle:not(:checked)) .windows-instructions-wrapper ,
+.main:has(#download-toggle:not(:checked)) .macos-instructions-wrapper   ,
+.main:has(#download-toggle:not(:checked)) .mobile-instructions-wrapper  {
+  opacity: 0 !important;
+  max-height: 0 !important ;
+  margin-top: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out, opacity 0.2s ease-out, padding-top 0.2s ease-out, margin-top 0.2s ease-out;
+}
+
+.linux-instructions-wrapper,
+.windows-instructions-wrapper,
+.macos-instructions-wrapper,
+.mobile-instructions-wrapper {
+  max-height: 0;
+  opacity: 0;
+  margin-top: 0;
+  overflow: hidden;
+  transition: opacity 0.2s ease-out;
+}
+
+/* ===> Linux / Windows / MacOS Buttons <====]II[====> Linux Distro Specific Instructions <=== */
+
+.main:has(#linux:checked)   .linux-instructions-wrapper,
+.main:has(#windows:checked) .windows-instructions-wrapper,
+.main:has(#macos:checked)   .macos-instructions-wrapper,
+.main:has(#mobile:checked)   .mobile-instructions-wrapper {
+  opacity: 1;
+  height: fit-content;
+  max-height: 100vh;
+}
+
+.arch-install-instructions,
+.fedora-install-instructions,
+.debian-install-instructions {
+  max-height: 0;
+  opacity: 0;
+  margin-top: 0;
+  transition: opacity 0.1s linear, max-height 0.2s ease-out;
+}
+
+#arch:not(:checked)   ~ .arch-install-instructions,
+#debian:not(:checked) ~ .debian-install-instructions,
+#fedora:not(:checked) ~ .fedora-install-instructions {
+  pointer-events: none;
+}
+
+#arch:checked   ~ .arch-opener p,
+#debian:checked ~ .debian-opener p,
+#fedora:checked ~ .fedora-opener p {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+#arch:checked ~ .arch-install-instructions {
+  opacity: 1;
+  max-height: 30vh;
+}
+
+#debian:checked ~ .debian-install-instructions {
+  opacity: 1;
+  max-height: 6vh;
+}
+
+#fedora:checked ~ .fedora-install-instructions {
+  opacity: 1;
+  max-height: 6vh;
+}
+
+.linux-distro-instructions {
+  margin-left: 5%;
+}
+
+.linux-distro-instructions p {
+  margin-top: 1vh;
+}
+
+.linux-distro-instructions .new-instruction {
+  margin-top: 3vh !important;
+}
+
+.linux-distro-instructions .code {
+  margin-left: 5%;
+}
+
+/* ===> Linux Distro Specific Instructions <====]II[====> Download Information <=== */
+
+.download-info-wrapper {
+  width: 100%;
+}
+
+.download-info {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.download-info p {
+  line-height: 2.6vh;
+  font-size: 2.1vh;
+}
+
+.download-info .code {
+  width: 100%;
+  color: var(--back-col);
+
+  background-color: black;
+}
+
+.download-info .code p {
+  padding: 2vh;
+  line-height: 2.5vh;
+  font-size: 1.8vh;
+}
+
+.download-info .code p::selection {
+  background-color: var(--fore-col-stronger);
+  color: var(--fore-col);
+}
+
+.download-info .pre-builts-divisor {
+  height: 2vh;
+  border-bottom: var(--border-width) solid var(--fore-col);
+}
+
+/* ===> Linux Distro Specific Instructions <====]II[====> Repository Stats <=== */
+
+.repo-info {
+  display:flex;
+
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 2vh;
+  padding-top: 1vh;
+
+  background-image: linear-gradient(var(--fore-col), var(--fore-col));
+  background-position: top center;
+  background-size: 60% 0.5vh;
+  background-repeat: no-repeat;
+}
+
+.repo-info p {
+  margin-top: 1vh;
+}

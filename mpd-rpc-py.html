@@ -1,16 +1,16 @@
 <html>
 <head>
 
-  <title>faction - mpd-local-scrobbler</title>
+  <title>faction - mpd-rpc-py</title>
 
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="stylesheet" href="res/mpd-local-scrobbler.css">
-  <link rel="stylesheet" href="res/mpd-local-scrobbler-mobile.css" media="(max-aspect-ratio: 0.95/1)">
+  <link rel="stylesheet" href="res/mpd-rpc-py.css">
+  <link rel="stylesheet" href="res/mpd-rpc-py-mobile.css" media="(max-aspect-ratio: 0.95/1)">
 
-  <meta property="og:title" content="mpd-local-scrobbler">
-  <meta property="og:description" content="Local scrobbler for MPD activity, accessible at any time and completely local.">
+  <meta property="og:title" content="mpd-rpc-py">
+  <meta property="og:description" content="Discord Rich Presence for MPD activity.">
   <meta property="og:image" content="https://faction.im/res/img/logoless-project.png">
-  <meta property="og:url" content="https://faction.im/mpd-local-scrobbler">
+  <meta property="og:url" content="https://faction.im/mpd-rpc-py">
   <meta name="theme-color" content="#AAAAAA">
 
 </head>
@@ -18,20 +18,17 @@
 <body>
   <div class="main"><div class="main-wrapper">
     <div class="header">
-      <h1>mpd-local-scrobbler</h1>
+      <h1>mpd-rpc-py</h1>
       <a href="/" class="go-back no-underline"><<< go back</a>
     </div>
 
     <div class="section-desc">
-      <p>Keep track of what you listen to without sending anything to any third-party servers you don't own.</br></br>
-      You won't have to wait until december to get a brief and superficial overview about
-      your activity anymore, now you'll be able to get in-depth info about it whenever you want to.
-      </p>
+      <p>Display your MPD activity on Discord and make your profile look a little bit less empty</p>
     </div>
 
     <div class="section-fancy">
       <div class="list">
-        <a href="https://codeberg.org/faction/mpd-local-scrobbler" class="no-underline">
+        <a href="https://codeberg.org/faction/mpd-rpc-py" class="no-underline">
         <div class="entry">
           <div class="img-wrapper"><img draggable="false" src="res/ico/codeberg.svg"></div>
           <p>Source Code</p>
@@ -48,7 +45,8 @@
       </div>
       
       <div class="photo">
-        <img draggable="false" src="res/img/mpd-scrob/struct.png">
+        <img class="dark-content no-invert" draggable="false" src="res/img/mpd-rpc/rpc-dark.png">
+        <img class="light-content no-invert" draggable="false" src="res/img/mpd-rpc/rpc-light.png">
       </div>
 
     </div>
@@ -99,47 +97,15 @@
         <p>If you'd like to build and install from source, you can clone the repo then run the install script for your distro.</p>
         <div class="code">
           <p>
-          git clone https://codeberg.org/faction/mpd-local-scrobbler.git</br>
-          cd mpd-local-scrobbler/install/linux</br>
+          git clone https://codeberg.org/faction/mpd-rpc-py.git</br>
+          cd mpd-rpc-py/install/linux</br>
           ls && echo "cd into your distro folder, then run install.sh"
           </p>
         </div>
 
         <div class="pre-builts-divisor"></div>
-        <p>Otherwise, here are some pre-builts and how-tos for different distros:</p>
+        <p>This program does not have a stable release yet, so no packages.</p>
         
-        <!-- Debian Instructions -->
-        <input class="invisible-input" type="radio" id="debian" name="linux-distro" value="1">
-        <label for="debian" class="debian-opener"><p>Debian / Ubuntu >>></p></label>
-
-        <div class="linux-distro-instructions debian-install-instructions">
-          <p>A Debian package is planned, but no advancements on it have been made.</p>
-        </div>
-
-        <!-- Arch Instructions -->
-        <input class="invisible-input" type="radio" id="arch" name="linux-distro" value="2">
-        <label for="arch" class="arch-opener"><p>Arch Linux / Manjaro / EndeavourOS >>></p></label>
-        
-        <div class="linux-distro-instructions arch-install-instructions">
-          <p>1. Install Dependencies:</p>
-          <div class="code">
-            <p>sudo pacman -S python-mpd2</p>
-          </div>
-          <p class="new-instruction">2. Download package <a href="https://codeberg.org/faction/mpd-local-scrobbler/releases/download/latest/mpd-local-scrobbler-0.0.0-1-x86_64.pkg.tar.zst">(.pkg.tar.zst)</a> | <a target="_blank" href="https://codeberg.org/faction/mpd-local-scrobbler/releases/download/v0.0.0/SHA256SUMS.txt">[SHA256]</a></p>
-          <p class="new-instruction">3. Install package:</p>
-          <div class="code">
-            <p>sudo pacman -U mpd-local-scrobbler.pkg.tar.zst</p>
-          </div>
-        </div>
-
-        <!-- Fedora Instructions -->
-        <input class="invisible-input" type="radio" id="fedora" name="linux-distro" value="3">
-        <label for="fedora" class="fedora-opener"><p>Fedora >>></p></label>
-        
-        <div class="linux-distro-instructions fedora-install-instructions">
-          <p>A Fedora package is planned, but no advancements on it have been made.</p>
-        </div>
-
       </div>
     </div>
 
@@ -162,9 +128,8 @@
     </div>
 
     <div class="repo-info">
-      <p id="repo-stable">stable: v0.0.0, released 13 days ago</p>
-      <p id="repo-dev">last dev commit made 13 days ago</p>
-      <p id="repo-stats">1 star</p>
+      <p id="repo-dev">last dev commit made yesterday</p>
+      <p id="repo-stats">0 stars</p>
     </div>
 
     <div class="scrollbar-outer">
