@@ -16,6 +16,7 @@
 }
 
 body {
+  background-color: var(--back-col);
   justify-content: center;
   align-items: center;
   
@@ -126,4 +127,17 @@ a:visited { color: var(--fore-col)          }
   font-size: 2vh;
 
   background-color: var(--back-col)
+}
+
+.light-content { display: block }
+.dark-content  { display: none  }
+
+@media (prefers-color-scheme: dark) {
+  html, .no-invert {
+    filter: invert(100%)
+  }
+
+  .light-content { display: none  }
+  .dark-content  { display: block }
+  
 }

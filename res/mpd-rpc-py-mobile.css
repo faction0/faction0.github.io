@@ -1,0 +1,164 @@
+@import "universal-mobile.css";
+
+/* I[====> Misc <=== */
+
+.mobile-download-option {
+  display: flex;
+
+  justify-content: space-between;
+
+  max-height: 0;
+  opacity: 0;
+  margin-top: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out, opacity 0.2s ease-out, padding-top 0.2s ease-out, margin-top 0.2s ease-out;
+}
+
+/* ===> Misc <====]II[====> Header <=== */
+
+.header .go-back {
+  display: none;
+}
+
+.header h1 {
+  margin-top: 1vw;
+  font-size: 6vw;
+}
+
+p {
+  font-size: 4vw;
+  font-weight: normal;
+
+  margin-bottom: 0;
+}
+
+/* ===> Header <====]II[====> Image and Source Code / Download Buttons <=== */
+
+.section-fancy {
+  height: 40vw;
+  margin-top: 2vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.section-fancy .photo {
+  display: none;
+}
+
+.section-fancy .list {
+  display: flex;
+  width: 100%;
+  
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-fancy .list .entry {
+  width: 80vw;
+  height: 15vw;
+  
+  border: var(--border-width) solid var(--fore-col);
+}
+
+.section-fancy .list .entry p {
+  margin-left: 20%;
+  margin-top: 3vw;
+  width: 75%;
+  font-size: 7.5vw;
+}
+
+.section-fancy .list .entry .img-wrapper {
+  padding: 2vw;
+  float: left;
+  
+  width: 12vw;
+  height: auto;
+}
+
+.section-fancy .list .entry .img-wrapper img {
+  width: inherit;
+}
+
+/* ===> Image and Source Code / Download Buttons <====]II[====> Linux / Windows / MacOS / Android || IPhone Buttons <=== */
+
+.download-options label {
+  border-width: var(--border-width);
+}
+
+.download-options .option {
+  height: 14vw;
+}
+
+.download-options .option .img-wrapper {
+  width: 13vw;
+}
+
+.download-options .option p {
+  display: none;
+}
+
+.mobile-download-option {
+  margin-top: 2vw;
+
+  height: 14vw;
+  width: 100%;
+}
+
+.mobile-download-option label {
+  border: var(--border-width) solid var(--fore-col);
+  width: 99%;
+}
+
+.mobile-download-option .option {
+  height: 100%;
+  min-width: 100%;
+
+  display: grid;
+  grid-auto-flow: column;
+  justify-items: center;
+  justify-content: normal;
+  align-items: center;
+}
+
+.mobile-download-option .option .android-svg-wrapper img {
+  height: 7vw;
+}
+
+.mobile-download-option .option .iphone-svg-wrapper img {
+  height: 7vw;
+}
+
+/* ===> Linux / Windows / MacOS / Android || IPhone Buttons <====]II[====> Linux Distro Specific Instructions <=== */
+
+.main:has(#linux:checked) .linux-instructions-wrapper {
+  max-height: 140vw;
+}
+
+#arch:checked ~ .arch-install-instructions {
+  opacity: 1;
+  max-height: 60vw;
+}
+
+#debian:checked ~ .debian-install-instructions {
+  opacity: 1;
+  max-height: 14vw;
+}
+
+#fedora:checked ~ .fedora-install-instructions {
+  opacity: 1;
+  max-height: 14vw;
+}
+
+/* ===> Linux Distro Specific Instructions <====]II[====> Download Information <=== */
+
+.download-info p {
+  line-height: 4.75vw;
+  font-size: 3.75vw;
+}
+
+.download-info .code p {
+  padding: 2vw;
+  line-height: 2.6vw;
+  font-size: 1.7vw;
+}
