@@ -4,8 +4,8 @@
   <title>faction - home</title>
 
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="stylesheet" href="res/desktop.css">
-  <link rel="stylesheet" href="res/mobile.css" media="(max-aspect-ratio: 0.95/1)">
+  <link rel="stylesheet" href="res/index.css">
+  <link rel="stylesheet" href="res/index-mobile.css" media="(max-aspect-ratio: 0.95/1)">
 
   <meta property="og:title" content="faction">
   <meta property="og:description" content="cybersecurity student. e-mail: me@faction.im">
@@ -16,110 +16,111 @@
 </head>
 
 <body>
-  <div class="desktop">
-    <div class="intro">
-      <img id="my-pic" title="me" class="pic" src="res/img/faction.png">
-      <div class="entry">
-        <div class="name">faction</div>
-        <div class="desc">cybersecurity student</div>
-        <div class="desc">i also develop stuff</div>
+  <div class="main"><div class="main-wrapper">
+    <div class="header">
+
+      <div class="info">
+        <img id="my-pic" title="me" class="no-invert" src="res/img/faction.png">
+        <h1>faction</h1>
+        <p>cybersecurity student</br>i also develop stuff</p>
       </div>
-      <div class="entry">
-        <div class="name">contact</div>
+
+      <div class="contact">
+        <h1>contact</h1>
+
         <div class="desc">
           <img src="res/ico/mail.svg" title="E-Mail" alt="E-Mail">
-          me@faction.im</div>
+          <p>me@faction.im</p>
+        </div>
+
         <div class="desc">
           <img src="res/ico/discord.svg" title="Discord" alt="Discord">
-          faction.im</div>
+          <p>faction.im</p>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="section">
+      <h1>projects</h1>
+
+      <div class="project">
+
+        <p class="title"><a href="mpd-rpc-py">mpd-rpc-py</a></p>
+
+        <p class="desc">discord rich presence for mpd activity</p>
+
+        <div class="icons">
+          <img src="res/ico/py.svg" title="Python" alt="Python">
+          <img src="res/ico/db.svg" title="Database" alt="Database">
+          <img src="res/ico/server.svg" title="Server" alt="Server">
+        </div>
+        
+      </div>
+
+      <div class="project">
+
+        <p class="title"><a href="mpd-local-scrobbler">mpd-local-scrobbler</a></p>
+
+        <p class="desc">tracks your mpd activity and stores it in a local database</p>
+
+        <div class="icons">
+          <img src="res/ico/py.svg" title="Python" alt="Python">
+          <img src="res/ico/db.svg" title="Database" alt="Database">
+        </div>
+
       </div>
     </div>
     <div class="section">
-
-      <div class="header">projects</div>
-
-      <div class="projects-row">
-
-         <div class="project left">
-          
-          <div class="title"><a href="mpd-local-scrobbler">mpd-local-scrobbler</a></div>
-          <div class="desc">tracks your mpd activity and stores it in a local database</div>
-
-          <div class="icons">
-            <img src="res/ico/py.svg" title="Python" alt="Python">
-            <img src="res/ico/db.svg" title="Database" alt="Database">
-          </div>
-
-        </div>
-
-        <div class="project right">
-          
-          <div class="title"><a href="mpd-rpc-py">mpd-rpc-py</a></div>
-          <div class="desc">Discord Rich Presence for MPD activity</div>
-
-          <div class="icons">
-            <img src="res/ico/py.svg" title="Python" alt="Python">
-            <img src="res/ico/db.svg" title="Database" alt="Database">
-            <img src="res/ico/server.svg" title="Server" alt="Server">
-          </div>
-
-        </div>
-
-       
-      </div>
-    </div>
-    <div class="section">
-      <div class="header">me around the net</div>
-
+      <h1>me around the net</h1>
       <div class="platforms">
 
         <a href="https://codeberg.org/faction">
           <img src="res/ico/codeberg.svg" title="Codeberg" alt="Codeberg">
         </a>
-
+        
         <a href="https://github.com/faction0">
           <img src="res/ico/github.svg" title="Github" alt="Github">
         </a>
-        
+
         <a href="https://osu.ppy.sh/u/faction">
           <img src="res/ico/taiko.svg" title="Taiko" alt="Taiko">
         </a>
+
         <a href="https://rateyourmusic.com/~fatosintesis">
-          <img src="res/ico/rym.svg" title="RYM" alt="RateYourMusic">
+          <img src="res/ico/rym.svg" title="RYM" alt="RYM">
         </a>
-        
 
       </div>
+
     </div>
-    <div class="section">
-      <div class="header">
-        misc
-      </div>
 
-      <ul class="miscs">
-        <li><a href="https://gist.github.com/faction0">gists</a>
+    <div class="section">
+      <h1>misc</h1>
+
+      <ul class="misc-list">
+
+        <li>
+          <a href="https://gist.github.com/faction0">gists</a>
           <span>quick snippets and thingies</span>
         </li>
-        <li><a href="/faction.asc">pgp</a>
+        
+        <li>
+          <a href="faction.asc">pgp</a>
           <span>my public key (last updated June 1st 2026)</span>
         </li>
+        
       </ul>
     </div>
 
-  </div>
-
-  <div class="mobile">
-    
-    <p> working on the mobile view. </p>
-    
-  </div>
+  </div></div>
 
   <div class="overlays">
-    <span class="mail">me@faction.im</span>
+    <span class="mail mobile-element">me@faction.im</span>
     <span class="site">https://faction.im</span>
     <img id="saosin-easter" src="res/misc/saosin.svg" alt="1/100 random event">
   </div>
-
+  
 </body>
 
 <script>
