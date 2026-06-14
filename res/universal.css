@@ -141,3 +141,6 @@ a:visited { color: var(--fore-col)          }
   .dark-content  { display: block }
   
 }
+
+.mobile-element  { display: none  }
+.desktop-element { display: block }

@@ -51,3 +51,6 @@
 
   background-color: white
 }
+
+.mobile-element  { display: block }
+.desktop-element { display: none  }
