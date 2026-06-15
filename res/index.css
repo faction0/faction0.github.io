@@ -46,7 +46,7 @@
   h1 {
     padding-bottom: 1.2vh;
     margin-bottom: 2.4vh;
-    border-bottom: #000 0.84vh solid;
+    border-bottom: var(--border-width-thick) solid var(--fore-col) ;
     width: fit-content;
   }
 }
@@ -196,7 +196,7 @@ h1 {
     top: 0.96vh;
     width: 1.2vh;
     height: 0.96vh;
-    background: black;
+    background: var(--fore-col);
   }
 
   span {

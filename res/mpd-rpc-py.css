@@ -284,7 +284,7 @@
   width: 100%;
   color: var(--back-col);
 
-  background-color: black;
+  background-color: var(--fore-col);
 }
 
 .download-info .code p {
