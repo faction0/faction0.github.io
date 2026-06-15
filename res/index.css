@@ -29,17 +29,6 @@
   right:5vh;
 }
 
-.invisible-input {
-  position: absolute;
-  height: 0;
-  width: 0;
-  pointer-events: none;
-}
-
-.mobile-download-option {
-  display:none;
-}
-
 .section {
   display: flow-root;
 
@@ -78,6 +67,7 @@ h1 {
 }
 
 .info {
+  float: left;
   width: 45.5vh;
 
   img {
@@ -86,14 +76,14 @@ h1 {
     float: left;
     border: 0.1vh solid var(--back-col)
   }
-
-  float: left
 }
 
 .contact {
-
   border-left: 0.84vh var(--fore-col) solid;
   margin-left: 0;
+
+  padding-left: 2.5vh;
+  float: left;
   
   .channel {
     img {
@@ -109,9 +99,6 @@ h1 {
       float: left
     }
   }
-
-  padding-left: 2.5vh;
-  float: left
 }
   
 

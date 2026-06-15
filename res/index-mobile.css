@@ -1,11 +1,30 @@
 @import "universal-mobile.css";
 
-/* I[====> Header <=== */
+/* I[====> Misc <=== */
 
 h1 {
   font-size: 7.44vw;
   font-weight: bold;
 }
+
+.section {
+  h1 {
+    padding-bottom: 2.2vw;
+    margin-bottom: 4.4vw;
+  }
+}
+
+/* Small divisor */
+:nth-child(1 of .section) {
+  border-top: var(--border-width-slim) var(--fore-col) solid;
+  margin-top: 2vw;
+
+  h1 {
+    margin-top: 2vw;
+  }
+}
+
+/* ===> Misc <====]II[====> Header <=== */
 
 .header {
   flex-direction: column;
@@ -19,14 +38,15 @@ h1 {
     padding-left: 0;
     padding-top: 1vw;
     margin-top: 3vw;
-    h1 {
-      display: none
-    }
 
     width: 40vw;
     border-left: unset;
     border-top: var(--border-width-meaty) var(--fore-col) solid;
 
+    h1 {
+      display: none
+    }
+    
     .channel {
       img {
         height: 4vw;
@@ -50,7 +70,7 @@ h1 {
   }
 }
 
-/* ===> Header <====]II[====> Project Description <=== */
+/* ===> Header <====]II[====> Projects <=== */
 
 .project {
   float: none !important;
@@ -83,22 +103,7 @@ h1 {
   }
 }
 
-.section {
-  h1 {
-    padding-bottom: 2.2vw;
-    margin-bottom: 4.4vw;
-  }
-}
-/* ===> Project Description <====]II[====> Image and Source Code / Download Buttons <=== */
-
-
-:nth-child(1 of .section) {
-  border-top: var(--border-width-slim) var(--fore-col) solid;
-  h1 {
-    margin-top: 2vw;
-  }
-    margin-top: 2vw;
-}
+/* ===> Projects <====]II[====> Platforms <=== */
 
 .platforms {
   img {
@@ -118,17 +123,19 @@ h1 {
   }
 }
 
+/* ===> Platforms <====]II[====> Misc List <=== */
+
 .misc-list {
+  li::before {
+    left: 2vw;
+    top: 1.2vw;
+    width: 2.4vw;
+    height: 2vw;
+  }
+
   li {
     font-size: 4vw;
     padding-left: 6.5vw;
-  }
-
-  li::before {
-      left: 2vw;
-      top: 1.2vw;
-      width: 2.4vw;
-      height: 2vw;
   }
 
   span {
