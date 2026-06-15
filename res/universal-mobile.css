@@ -1,7 +1,12 @@
 @import "universal.css";
 
 :root {
+  --border-width-slim: 0.3vw;
+
   --border-width: 0.5vw;
+  
+  --border-width-meaty: 0.70vw;
+  --border-width-thick: 1.55vw;
 }
 
 .main {
@@ -21,7 +26,7 @@
 
 .scrollbar-outer {
   position: absolute;
-  top: -4.5vw;
+  top: -4vw;
   right: -4%;
   width: 2%;
   height: calc(101.5% + 4.65vw);
@@ -42,14 +47,14 @@
 
 .overlays .site {
   position: absolute;
-  bottom: -1.4vw;
+  bottom: -2vw;
   right: 5vw;
 
   padding: 0 1vw;
 
-  font-size: 2.5vw;
+  font-size: 3vw;
 
-  background-color: white
+  background-color: var(--back-col)
 }
 
 .mobile-element  { display: block }

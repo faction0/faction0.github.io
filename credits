@@ -18,6 +18,7 @@ res/ico/rym.svg: https://commons.wikimedia.org/wiki/File:Rate_Your_Music_logo.sv
 res/ico/server.svg: https://www.svgrepo.com/svg/358169/server | cropped contentless areas.
 res/ico/taiko.svg: https://osu.ppy.sh/rankings/taiko/global/performance?filter=all | taken from custom font
 res/ico/windows.svg: https://www.svgrepo.com/svg/473831/windows
+res/ico/lastfm.svg: https://www.svgrepo.com/svg/494208/lastfm
 
 res/img/faction.png: https://barnyard.fandom.com/wiki/Pig?file=Pig_Barnyard_Videogame.jpg | cropped
 res/img/troll.jpg: https://knowyourmeme.com/photos/3265436-realistic-troll-face-hey-you-might-know-me-already

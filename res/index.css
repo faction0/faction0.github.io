@@ -95,17 +95,19 @@ h1 {
   border-left: 0.84vh var(--fore-col) solid;
   margin-left: 0;
   
-  img {
-    user-select: none;
-    height: 2.5vh;
-    padding-top: 0.3vh;
-    padding-right: 1.2vh;
+  .channel {
+    img {
+      user-select: none;
+      height: 2.5vh;
+      padding-top: 0.3vh;
+      padding-right: 1.2vh;
 
-    float: left
-  }
+      float: left
+    }
 
-  p {
-    float: left
+    p {
+      float: left
+    }
   }
 
   padding-left: 2.5vh;
@@ -116,7 +118,7 @@ h1 {
 /* ===> Header <====]II[====> Projects <=== */
 
 .project {
-  border: 0.36vh var(--fore-col) solid;
+  border: var(--border-width) var(--fore-col) solid;
   width: 42vh;
   height: 13.8vh;
 

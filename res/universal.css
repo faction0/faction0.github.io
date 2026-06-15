@@ -10,7 +10,10 @@
   --fore-col-stronger: #aaa;
   --fore-col-strong: #555;
 
+  --border-width-slim: 66vh;
+
   --border-width: 0.3vh;
+
   --border-width-meaty: 0.36vh;
   --border-width-thick: 0.84vh;
 }
@@ -20,7 +23,7 @@ body {
   justify-content: center;
   align-items: center;
   
-  color: var(--main-col);
+  color: var(--fore-col);
 
   font-family: 'Adwaita Mono';
   font-weight: normal;
@@ -133,8 +136,13 @@ a:visited { color: var(--fore-col)          }
 .dark-content  { display: none  }
 
 @media (prefers-color-scheme: dark) {
-  html, .no-invert {
-    filter: invert(100%)
+
+  html {
+    filter: invert(1) brightness(0.95)
+  }
+
+  .no-invert {
+    filter: brightness(1.05) invert(1) ;
   }
 
   .light-content { display: none  }
