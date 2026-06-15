@@ -1,0 +1,200 @@
+@import "universal.css";
+
+/* I[====> Misc <=== */
+
+.overlays {
+  user-select: none;
+  
+  pointer-events: none;
+  padding: 1vh;
+  width: 90.6vh;
+  height: 85vh;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#saosin-easter {
+  display: none;
+
+  /* https://codepen.io/sosuke/pen/Pjoqqp how do you even come up with this */
+  filter: invert(43%) sepia(0%) saturate(1180%) hue-rotate(177deg) brightness(91%) contrast(77%) opacity(12%);
+
+  width:40vh;
+
+  position:absolute;
+  bottom:5vh;
+  right:5vh;
+}
+
+.section {
+  display: flow-root;
+
+  h1 {
+    padding-bottom: 1.2vh;
+    margin-bottom: 2.4vh;
+    border-bottom: var(--border-width-thick) solid var(--fore-col) ;
+    width: fit-content;
+  }
+}
+
+/* ===> Misc <====]II[====> Header <=== */
+
+.header {
+  padding-top: 2.3vh;
+  overflow: auto;
+  height: fit-content;
+
+  display: flex;
+  justify-content: center
+}
+
+h1 {
+  font-size: 3.72vh;
+  font-weight: bold;
+}
+
+.header h1 {
+  margin: 0;
+}
+
+.header p {
+  margin: 0;
+  font-size: 2.4vh;
+  font-weight: normal;
+}
+
+.info {
+  float: left;
+  width: 45.5vh;
+
+  img {
+    height: 10.6vh;
+    margin-right: 2vh;
+    float: left;
+    border: 0.1vh solid var(--back-col)
+  }
+}
+
+.contact {
+  border-left: 0.84vh var(--fore-col) solid;
+  margin-left: 0;
+
+  padding-left: 2.5vh;
+  float: left;
+  
+  .channel {
+    img {
+      user-select: none;
+      height: 2.5vh;
+      padding-top: 0.3vh;
+      padding-right: 1.2vh;
+
+      float: left
+    }
+
+    p {
+      float: left
+    }
+  }
+}
+  
+
+/* ===> Header <====]II[====> Projects <=== */
+
+.project {
+  border: var(--border-width) var(--fore-col) solid;
+  width: 42vh;
+  height: 13.8vh;
+
+  .title {
+    margin-top: 5%;
+    margin-left: 5%;
+    font-weight: bold;
+    font-size: 2.4vh;
+  }
+
+  .desc {
+    margin-top: 2%;
+    margin-left: 2.1vh;
+    font-size: 1.8vh;
+    font-style: italic;
+  }
+
+  .icons {
+    user-select: none;
+    float: right;
+    margin-top: 0.48vh;
+    margin-right: 0.6vh;
+
+    img {
+      float: left;
+      width: 2.16vh;
+      margin-left: 0.6vh;
+    }
+  }
+}
+
+.project:nth-of-type(even) {
+  float:right
+}
+
+.project:nth-of-type(odd) {
+  float:left
+}
+
+/* ===> Projects <====]II[====> Platforms <=== */
+
+.platforms {
+  a {
+    user-select: none;
+    font-size: 0;
+  }
+
+  img {
+    height: 12vh;
+  }
+
+  > :not(:first-child) {
+    padding-left: 3vh;
+  }
+}
+
+/* ===> Platforms <====]II[====> Misc List <=== */
+
+.misc-list {
+  list-style: none;
+  margin: 0;
+  padding-left: 0; 
+
+  li {
+    font-size: 2.4vh;
+    font-weight: bold;
+
+    position: relative;
+    padding-left: 3.6vh;
+    white-space-collapse: collapse;
+  }
+
+  li::before {
+    content: "";
+    position: absolute;
+    left: 1.08vh;
+    top: 0.96vh;
+    width: 1.2vh;
+    height: 0.96vh;
+    background: var(--fore-col);
+  }
+
+  span {
+    font-size: 1.8vh;
+    font-style: italic;
+    font-weight: normal;
+  }
+
+  > :not(:first-child) {
+    margin-top: 1.2vh;
+  }
+}
