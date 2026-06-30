@@ -115,7 +115,8 @@ h1 {
   }
 
   > :nth-child(5n) {
-    padding-left: 0;
+    padding-left: 0.45vw;
+    padding-right: 0.65vw;
 
     img {
       padding-top: 4vw;
