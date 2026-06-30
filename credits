@@ -1,4 +1,4 @@
-favicon.ico: https://barnyard.fandom.com/wiki/Pig?file=Pig_Barnyard_Videogame.jpg | cropped and resized
+favicon.ico: https://plantsvszombies.fandom.com/wiki/Plants_vs._Zombies/Gallery?file=Doom-shroom-hd.png | resized
 
 res/font/Adwaita*: https://gitlab.gnome.org/GNOME/adwaita-fonts | Reformatted into woff2
 res/font/NotoSansMono-Var.woff2: https://fonts.google.com/noto/specimen/Noto+Sans+Mono | Reformatted into woff2
@@ -10,18 +10,21 @@ res/ico/db.svg: https://www.svgrepo.com/svg/498954/database
 res/ico/discord.svg: https://www.svgrepo.com/svg/378411/discord-fill
 res/ico/download.svg: https://www.svgrepo.com/svg/389761/download
 res/ico/github.svg: https://brand.github.com/foundations/logo
+res/ico/insta.svg: https://www.svgrepo.com/svg/521711/instagram | cropped contentless borders
 res/ico/iphone.svg: https://commons.wikimedia.org/wiki/File:Apple_iPhone.svg
 res/ico/linux.svg: https://www.svgrepo.com/svg/473700/linux
 res/ico/mail.svg: https://www.svgrepo.com/svg/511917/email-1572
 res/ico/py.svg: https://www.svgrepo.com/svg/512738/python-127
 res/ico/rym.svg: https://commons.wikimedia.org/wiki/File:Rate_Your_Music_logo.svg | Monochromed
-res/ico/server.svg: https://www.svgrepo.com/svg/358169/server | cropped contentless areas.
+res/ico/server.svg: https://www.svgrepo.com/svg/358169/server | cropped contentless borders
 res/ico/taiko.svg: https://osu.ppy.sh/rankings/taiko/global/performance?filter=all | taken from custom font
 res/ico/windows.svg: https://www.svgrepo.com/svg/473831/windows
 res/ico/lastfm.svg: https://www.svgrepo.com/svg/494208/lastfm
 
-res/img/faction.png: https://barnyard.fandom.com/wiki/Pig?file=Pig_Barnyard_Videogame.jpg | cropped
+res/img/faction.png: https://plantsvszombies.fandom.com/wiki/Plants_vs._Zombies/Gallery?file=Doom-shroom-hd.png
 res/img/troll.jpg: https://knowyourmeme.com/photos/3265436-realistic-troll-face-hey-you-might-know-me-already
+
+res/img/logoless-project.png: https://plantsvszombies.fandom.com/wiki/Plants_vs._Zombies/Gallery?file=Doom-shroom-hd.png | edited
 
 res/misc/saosin.svg: Made with https://freefonts.co/fonts/dutch-801-roman
 
