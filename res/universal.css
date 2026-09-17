@@ -132,6 +132,14 @@ a:visited { color: var(--fore-col)          }
   background-color: var(--back-col)
 }
 
+.overlays #retep {
+  position: absolute;
+  right: 0;
+  top: 0;
+  opacity: 0.2;
+  display: none;
+}
+
 .light-content { display: block }
 .dark-content  { display: none  }
 
