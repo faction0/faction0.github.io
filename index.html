@@ -117,6 +117,11 @@
           <a href="faction.asc">pgp</a>
           <span>my public key (last updated June 1st 2026)</span>
         </li>
+
+        <li>
+          <a href="https://extra.faction.im/727">727</a>
+          <span>727 neuron activation archive</span>
+        </li>
         
       </ul>
     </div>
@@ -130,6 +135,7 @@
   <div class="overlays">
     <span class="site">https://faction.im</span>
     <img id="saosin-easter" src="res/misc/saosin.svg" alt="1/100 random event">
+    <img class="no-invert" id="retep" src="res/misc/retep.webp" alt="1/50 random event">
   </div>
   
 </body>
@@ -138,12 +144,69 @@
 
   // amazing and useful javascript i love javascript
   // this is the only js i use on the whole site
+
+  function message00(msg) {
+    const existingElement = document.getElementsByClassName('main-wrapper')[0]
+    const newElement = document.createElement('div');
+    newElement.textContent = msg;
+    existingElement.before(newElement);
+  }
+
+  function trigger_retep() {
+    let base = 0
+    const retep = document.getElementById("retep");
+    retep.style.display = 'block';
+
+    // anim
+    function a() {
+      base += 0.05
+      
+      const x = Math.sin(base) * 0.2;
+      const y = Math.sin(base + 1.5) * 0.2;
+
+      retep.style.transform = `scale(${1.5 - x}, ${1 + y})`;
+
+      requestAnimationFrame(a);
+    }
+    a();
+
+    // stick
+    function u() {
+      window.scrollTo(document.documentElement.scrollWidth, window.scrollY);
+      requestAnimationFrame(u);
+    }
+    u();
+
+    message00('you got 1/50 "retep" easter egg')
+  }
   
-  if (Math.random() < 0.01)
+  function trigger_saosin() {
     document.getElementById("saosin-easter").style.display = "block";
+    message00('you got 1/100 "saosin" easter egg')
+  }
+
+  async function trigger_qr() {
+    const e = document.getElementsByClassName('main-wrapper')[0];
+    e.style.fontSize = '2vw'
+    e.style.lineHeight = '2vw'
+    e.style.letterSpacing = '-0.1vw'
+    e.innerHTML = '█████████████████████████████████████</br>█████████████████████████████████████</br>████ ▄▄▄▄▄ ██▀ █▄ ▀▀▄  ▄██ ▄▄▄▄▄ ████</br>████ █   █ ██▀██  ▀▀▄▄▄█▄█ █   █ ████</br>████ █▄▄▄█ █▀▀ █   █▄▄ ▀██ █▄▄▄█ ████</br>████▄▄▄▄▄▄▄█▄█ █ █ █▄▀ █ █▄▄▄▄▄▄▄████</br>████▄▀▀ ▀ ▄▀▄▀▀▀▀█▀ █▀██▀ ▀▄█▀██▀████</br>█████▄  ██▄█ █▄▀██▀▀▄██▄██▄▀▄▄  █████</br>████▀▀ ▄▀ ▄███ ▄▀██▀▄▄█▀▀ ▄▄█▄█▄▄████</br>████▄▀▄▄ ▀▄ ▄▀█▄▄▀▀▄ ▀▀█ ▄▀▀█ ▄ ▄████</br>████▄▀  █ ▄█ █  ▀▄▄ █ ██  ▀▀█▀█▄▀████</br>████▄█▄▀█▀▄▄▀▄█ ▀ ███ ██▀ █ ▄██  ████</br>████▄██▄▄▄▄▄▀▄ █ ▀▄█ ▀█  ▄▄▄ █ ▀▀████</br>████ ▄▄▄▄▄ █▀▀▄▀  ▄▀██▀█ █▄█ ▀▀ █████</br>████ █   █ █▀ ▄ ▄█ ██▄▄▀▄    ▀▀▀▄████</br>████ █▄▄▄█ ██▄▄ █▄▄█▄▀█▀ █▀▀ ▄▄▀▄████</br>████▄▄▄▄▄▄▄█▄███▄█▄▄█▄██▄█▄▄▄▄█▄█████</br>█████████████████████████████████████</br>▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀</br>'
+  
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+    window.location.href = window.location.href
+  }
+
+  if (Math.random() < 0.02)
+    trigger_retep()
+
+  if (Math.random() < 0.01)
+    trigger_saosin()
+
+  if (Math.random() < 0.005)
+    trigger_qr()
 
   if (Math.random() < 0.5) {
-    const m = ['yo', 'yo irl', 'me irl', 'hola', 'ola', 'hi', '自分'];
+    const m = ['yo', 'yo irl', 'me irl', 'hola', 'ola', 'hi'];
     document.getElementById("my-pic").title = m[Math.floor(Math.random() * m.length)];
   }
 
